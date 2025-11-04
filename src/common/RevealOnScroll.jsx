@@ -5,7 +5,7 @@ import { useRef, useEffect, useState } from "react";
 /**
  * RevealOnScroll
  * Reusable animation wrapper for scroll-triggered reveals.
- * If element is already visible on mount (above current scroll position), 
+ * If element is already visible on mount (above current scroll position),
  * it shows immediately without animation.
  *
  * Usage:
@@ -24,11 +24,12 @@ const RevealOnScroll = ({ children, direction = "bottom", delay = 0 }) => {
     const checkVisibility = () => {
       if (ref.current) {
         const rect = ref.current.getBoundingClientRect();
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
         // Get element's bottom position relative to document
         const elementBottom = rect.bottom + scrollTop;
-        
+
         // Only show immediately if element is completely above current scroll position
         // (meaning it was already scrolled past, not currently visible)
         if (elementBottom < scrollTop) {
@@ -39,10 +40,10 @@ const RevealOnScroll = ({ children, direction = "bottom", delay = 0 }) => {
 
     // Check immediately
     checkVisibility();
-    
+
     // Also check after a small delay to account for layout shifts and dynamic content
     const timeoutId = setTimeout(checkVisibility, 100);
-    
+
     return () => clearTimeout(timeoutId);
   }, []);
 

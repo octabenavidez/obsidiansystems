@@ -3,7 +3,8 @@
 /* === FONT: Inter (para texto general) === */
 @font-face {
   font-family: "Inter";
-  src: url("/src/assets/fonts/Inter-Variable.woff2") format("woff2-variations"),
+  src:
+    url("/src/assets/fonts/Inter-Variable.woff2") format("woff2-variations"),
     url("/src/assets/fonts/Inter-Variable.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
@@ -14,4 +15,8 @@
 /* === GLOBAL BODY FONT === */
 body {
   font-family: "Inter", sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }

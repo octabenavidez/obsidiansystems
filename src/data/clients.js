@@ -48,4 +48,3 @@ export const clientes = [
     imagen: "/src/assets/images/clients-images/alexander.png",
   },
 ];
-

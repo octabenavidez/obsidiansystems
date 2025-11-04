@@ -3,17 +3,16 @@ import { clientes } from "../data/clients";
 import RevealOnScroll from "../common/RevealOnScroll";
 
 const ClientsSection = () => {
-
   return (
-    <section className=" text-white py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+    <section className="px-4 py-20 text-white">
+      <div className="mx-auto max-w-7xl">
         {/* === Section Header === */}
         <RevealOnScroll direction="up" delay={0.2}>
-          <div className="text-center mb-16 space-y-4">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <Users className="w-10 h-10 text-[#aca377]" />
+          <div className="mb-16 space-y-4 text-center">
+            <div className="mb-6 flex items-center justify-center gap-3">
+              <Users className="h-10 w-10 text-[#aca377]" />
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight">
+            <h2 className="text-5xl leading-tight font-bold tracking-tight md:text-6xl">
               Algunos Clientes
               <br />
               Que Trabajan Conmigo
@@ -22,7 +21,7 @@ const ClientsSection = () => {
         </RevealOnScroll>
 
         {/* === Clients Grid === */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {clientes.map((cliente, i) => (
             <RevealOnScroll
               key={i}
@@ -30,28 +29,28 @@ const ClientsSection = () => {
               delay={0.1 * (i + 1)}
             >
               <div className="group relative">
-                <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-zinc-900 to-black border border-zinc-800 hover:border-[#aca377] transition-all duration-500 hover:shadow-[0_0_40px_rgba(172,163,119,0.3)]">
+                <div className="relative overflow-hidden rounded-2xl border border-zinc-800 bg-gradient-to-br from-zinc-900 to-black transition-all duration-500 hover:border-[#aca377] hover:shadow-[0_0_40px_rgba(172,163,119,0.3)]">
                   <div className="relative h-[400px] overflow-hidden">
                     <img
                       src={cliente.imagen}
                       alt={cliente.nombre}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-80"></div>
                   </div>
 
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="absolute right-0 bottom-0 left-0 p-6">
                     <div className="relative">
-                      <h3 className="text-xl font-bold text-white mb-1 transform transition-transform duration-300 group-hover:translate-y-[-4px]">
+                      <h3 className="mb-1 transform text-xl font-bold text-white transition-transform duration-300 group-hover:translate-y-[-4px]">
                         {cliente.nombre}
                       </h3>
-                      <div className="w-16 h-1 bg-[#aca377] rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                      <div className="h-1 w-16 origin-left scale-x-0 transform rounded-full bg-[#aca377] transition-transform duration-500 group-hover:scale-x-100"></div>
                     </div>
                   </div>
 
                   <div
-                    className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                    className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                     style={{
                       background:
                         "linear-gradient(135deg, rgba(172,163,119,0.1) 0%, transparent 50%, rgba(172,163,119,0.1) 100%)",
