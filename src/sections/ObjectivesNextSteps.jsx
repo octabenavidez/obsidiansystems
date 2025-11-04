@@ -71,7 +71,7 @@ const ObjectivesNextSteps = () => {
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#aca377] to-[#8a8555] mb-6 animate-pulse">
                 <Target className="w-10 h-10 text-black" />
               </div>
-              <h2 className="text-6xl md:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-[#aca377] to-white">
+              <h2 className="text-6xl md:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-[#aca377] to-white leading-tight">
                 Objetivo
               </h2>
               <p className="text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">

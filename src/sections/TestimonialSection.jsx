@@ -42,10 +42,26 @@ const TestimonialsSection = () => {
               delay={0.15 * (index + 1)}
             >
               <div className="group relative bg-gradient-to-br from-zinc-900 to-black border-6 border-[#aca377] rounded-2xl overflow-hidden hover:shadow-[0_0_40px_rgba(172,163,119,0.4)] transition-all duration-500">
-              <div className="grid lg:grid-cols-3 gap-6 p-6 lg:p-8">
-                {/* Video Section */}
-                <div className="flex justify-center items-center col-span-1">
-                  <div className="relative w-full max-w-[320px] aspect-[9/16] rounded-xl overflow-hidden bg-zinc-800 shadow-lg border border-zinc-700">
+              <div
+                className={`grid gap-6 p-6 lg:p-8 ${
+                  testimonial.isHorizontal
+                    ? "lg:grid-cols-2"
+                    : "lg:grid-cols-3"
+                }`}
+              >
+                {/* Video Section - Primero para videos verticales, segundo para horizontales */}
+                <div
+                  className={`flex justify-center items-center ${
+                    testimonial.isHorizontal ? "order-2" : "col-span-1 order-1"
+                  }`}
+                >
+                  <div
+                    className={`relative w-full rounded-xl overflow-hidden bg-zinc-800 shadow-lg border border-zinc-700 ${
+                      testimonial.isHorizontal
+                        ? "aspect-video"
+                        : "max-w-[320px] aspect-[9/16]"
+                    }`}
+                  >
                     <iframe
                       src={`https://fast.wistia.net/embed/iframe/${testimonial.videoId}?seo=false&videoFoam=true`}
                       title={`Testimonio de ${testimonial.name}`}
@@ -59,8 +75,14 @@ const TestimonialsSection = () => {
                   </div>
                 </div>
 
-                {/* Content Section */}
-                <div className="flex flex-col justify-center gap-6 col-span-2">
+                {/* Content Section - Segundo para videos verticales, primero para horizontales */}
+                <div
+                  className={`flex flex-col justify-center gap-6 ${
+                    testimonial.isHorizontal
+                      ? "order-1"
+                      : "col-span-2 order-2"
+                  }`}
+                >
                   {/* Rating Stars */}
                   <div className="flex gap-0.5 mt-0.5">
                     {[...Array(testimonial.rating)].map((_, i) => (
