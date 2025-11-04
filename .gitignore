@@ -25,3 +25,4 @@ dist-ssr
 
 # Images - Fran folder
 src/assets/images/Fran/
+.cursor/
