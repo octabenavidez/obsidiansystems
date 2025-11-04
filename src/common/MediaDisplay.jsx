@@ -62,7 +62,7 @@ const MediaDisplay = ({
       {type === "video" ? (
         <video
           src={src}
-          className={`w-full h-full object-cover ${rounded}`}
+          className={`h-full w-full object-cover ${rounded}`}
           autoPlay={autoPlay}
           loop={loop}
           muted={muted}
@@ -74,7 +74,7 @@ const MediaDisplay = ({
         <img
           src={src}
           alt={alt || "Media content"}
-          className={`w-full h-full object-cover ${rounded}`}
+          className={`h-full w-full object-cover ${rounded}`}
           loading="lazy"
         />
       )}

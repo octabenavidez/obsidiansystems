@@ -25,7 +25,7 @@ const ScheduleCallButton = ({
         href={href}
         target={newTab ? "_blank" : "_self"}
         rel="noopener noreferrer"
-        className="relative flex items-center justify-center w-full max-w-[532px] h-[70px] bg-[#0f0f0f] border-4 border-[#aca377] rounded-[10px] text-white font-extrabold text-[36px] text-center no-underline transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+        className="relative flex h-[70px] w-full max-w-[532px] items-center justify-center rounded-[10px] border-4 border-[#aca377] bg-[#0f0f0f] text-center text-[36px] font-extrabold text-white no-underline transition-all duration-300 hover:scale-105 hover:shadow-2xl"
         style={{
           display: "flex",
           alignItems: "center",
