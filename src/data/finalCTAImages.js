@@ -1,104 +1,88 @@
 export const photos = [
   // Row 1
   {
-    src: "https://framerusercontent.com/images/VtV3JPfDPnuE8eyGVc3tDYk9AA.jpeg",
+    src: "/src/assets/images/final-cta-images/screen-1.avif",
     width: 289,
     height: 314,
-    alt: "Captura de pantalla de resultados 1",
   },
   {
-    src: "https://framerusercontent.com/images/uVuQnkX9yyQ7Hfl5vBoR3esTMOM.jpeg",
+    src: "/src/assets/images/final-cta-images/screen-2.avif",
     width: 433,
     height: 314,
-    alt: "Captura de pantalla de resultados 2",
   },
   {
-    src: "https://framerusercontent.com/images/ogZXU4gdl6mVgyMIIKJFCzX4JaU.jpeg",
+    src: "/src/assets/images/final-cta-images/screen-3.avif",
     width: 176,
     height: 309,
-    alt: "Captura de pantalla de resultados 3",
   },
   {
-    src: "https://framerusercontent.com/images/nSFFlV0vzFFx3pX22IjGNA6sxc.jpeg",
+    src: "/src/assets/images/final-cta-images/screen-4.avif",
     width: 194,
     height: 311,
-    alt: "Captura de pantalla de resultados 4",
   },
   // Row 2
   {
-    src: "https://framerusercontent.com/images/JZEg9BYfYoU4pKg6UHAmhjOFwo.jpeg",
+    src: "/src/assets/images/final-cta-images/screen-5.avif",
     width: 221,
     height: 322,
-    alt: "Captura de pantalla de resultados 5",
   },
   {
-    src: "https://framerusercontent.com/images/izvvJMboWDssj7EAnieQjs6OxYU.jpeg",
+    src: "/src/assets/images/final-cta-images/screen-6.avif",
     width: 184,
     height: 325,
-    alt: "Captura de pantalla de resultados 6",
   },
   {
-    src: "https://framerusercontent.com/images/1bjGOzyCagRfoj2FMgFfM6VDqI4.png",
+    src: "/src/assets/images/final-cta-images/screen-7.avif",
     width: 502,
     height: 323,
-    alt: "Captura de pantalla de resultados 7",
   },
   {
-    src: "https://framerusercontent.com/images/xE0RjTTdOnFKAmmY3xbwWhUiDI.jpeg",
+    src: "/src/assets/images/final-cta-images/screen-8.avif",
     width: 183,
     height: 323,
-    alt: "Captura de pantalla de resultados 8",
   },
   // Row 3
   {
-    src: "https://framerusercontent.com/images/p7C5iY30JwbJ8ALI8gePgjfVkU.jpeg",
+    src: "/src/assets/images/final-cta-images/screen-9.avif",
     width: 305,
     height: 179,
-    alt: "Captura de pantalla de resultados 9",
   },
   {
-    src: "https://framerusercontent.com/images/On4mR2iBMS3wJbogSvlzgWbWnKU.jpeg",
+    src: "/src/assets/images/final-cta-images/screen-10.avif",
     width: 320,
     height: 180,
-    alt: "Captura de pantalla de resultados 10",
   },
   {
-    src: "https://framerusercontent.com/images/dYtuk1SPqo1RAKvLWkHUCLyVCI.jpeg",
+    src: "/src/assets/images/final-cta-images/screen-11.avif",
     width: 357,
     height: 184,
-    alt: "Captura de pantalla de resultados 11",
   },
 ];
 
 export const hero = [
   // Row 4 - Full width
   {
-    src: "https://framerusercontent.com/images/U7gidWwaeLAlg1yHaIFKB1g0kI.jpeg",
+    src: "/src/assets/images/final-cta-images/screen-12.avif",
     width: 1237,
     height: 394,
-    alt: "Captura de pantalla de resultados 12",
   },
 ];
 
 export const largerPhotos = [
   // Row 5
   {
-    src: "https://framerusercontent.com/images/2GNKfzbSQXM0VLGq4Z3F97mIJ9Q.jpeg",
+    src: "/src/assets/images/final-cta-images/screen-13.avif",
     width: 327,
     height: 92,
-    alt: "Captura de pantalla de resultados 13",
   },
   {
-    src: "https://framerusercontent.com/images/GRjMN44IclgQMVoFEyKHvwkss.png",
+    src: "/src/assets/images/final-cta-images/screen-14.png",
     width: 395,
     height: 93,
-    alt: "Captura de pantalla de resultados 14",
   },
   {
-    src: "https://framerusercontent.com/images/cIxGnwNrocMH7oihrHvsNwcPBZk.jpeg",
+    src: "/src/assets/images/final-cta-images/screen-15.avif",
     width: 311,
     height: 97,
-    alt: "Captura de pantalla de resultados 15",
   },
 ];
-
