@@ -8,7 +8,7 @@ import { photos, hero, largerPhotos } from "../data/finalCTAImages";
 
 const FinalCTASection = () => {
   return (
-    <section className="px-4 py-16 text-white">
+    <section className="px-4 pt-16 text-white">
       <div className="mx-auto max-w-7xl space-y-16">
         {/* === FOMO Message === */}
         <RevealOnScroll direction="up" delay={0.2}>
@@ -16,12 +16,13 @@ const FinalCTASection = () => {
             <div>
               <div className="flex items-start justify-center gap-4">
                 <AlertCircle className="mt-2 h-8 w-8 flex-shrink-0 text-[#aca377]" />
-                <h2 className="text-left text-2xl leading-relaxed font-medium lg:text-3xl">
+                <h2 className="text-left text-xl leading-relaxed font-medium lg:text-2xl">
                   <span className="font-bold text-[#aca377]">PD: </span>
                   <span className="font-bold">
-                    Esto NO es FOMO: literalmente solo trabajo con 5 clientes
-                    por trimestre. Cuando entra, asumo su negocio como propio
-                    para garantizar resultados increíbles lo más pronto posible.
+                    Esto NO es FOMO: literalmente solo trabajo con 3 clientes
+                    nuevos por mes. Cuando entran, asumo sus negocios como
+                    propios para garantizarles resultados increíbles lo más
+                    pronto posible.
                   </span>
                 </h2>
               </div>
@@ -68,7 +69,7 @@ const FinalCTASection = () => {
               <RowsPhotoAlbum
                 photos={photos}
                 targetRowHeight={320}
-                spacing={4}
+                spacing={8}
                 padding={0}
                 rowConstraints={{ minPhotos: 1, maxPhotos: 4 }}
                 render={{
@@ -93,7 +94,7 @@ const FinalCTASection = () => {
               <RowsPhotoAlbum
                 photos={hero}
                 targetRowHeight={180}
-                spacing={4}
+                spacing={8}
                 render={{
                   image: (props, context) => (
                     <ModalImage
@@ -116,7 +117,7 @@ const FinalCTASection = () => {
               <RowsPhotoAlbum
                 photos={largerPhotos}
                 targetRowHeight={180}
-                spacing={4}
+                spacing={8}
                 render={{
                   image: (props, context) => (
                     <ModalImage

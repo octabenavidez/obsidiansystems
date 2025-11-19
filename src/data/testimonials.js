@@ -1,71 +1,39 @@
 export const testimonials = [
   {
+    id: 3,
+    name: "Gianpiero Fusco | Referente Fitness",
+    videoId: "62rc07fz7v",
+    thumbnail:
+      "https://framerusercontent.com/images/4mBdj9mg0FN3ecinEUKwUgnBslc.png",
+    achievements: ["Renovamos todo desde 0 y he visto los resultados."],
+    rating: 5,
+    satisfaction: "10/10",
+  },
+  {
     id: 1,
-    name: "Felipe Ureña",
+    name: "Felipe Ureña | Consultor B2B",
     videoId: "bglq4u1f6l",
     thumbnail:
       "https://framerusercontent.com/images/4mBdj9mg0FN3ecinEUKwUgnBslc.png",
-    achievements: [
-      "Claridad de los movimientos a realizar con su agencia en 2025.",
-      {
-        text: "Actualización de su Frontend ",
-        highlight: "(Adquisición & Ventas).",
-      },
-      {
-        text: "Armado de servicio de contenido DFY ",
-        highlight: "(High Ticket).",
-      },
-    ],
+    achievements: ["Fran siempre está atento en conseguirte resultados."],
     rating: 5,
     satisfaction: "10/10",
   },
   {
     id: 2,
-    name: "Felipe Leguizamón",
+    name: "Felipe Leguizamón | Consultor IA",
     videoId: "y5c97bd5s1",
     thumbnail:
       "https://framerusercontent.com/images/4mBdj9mg0FN3ecinEUKwUgnBslc.png",
     achievements: [
-      "Claridad de los movimientos a realizar con su agencia en 2025.",
-      {
-        text: "Actualización de su Frontend ",
-        highlight: "(Adquisición & Ventas).",
-      },
-      {
-        text: "Armado de servicio de contenido DFY ",
-        highlight: "(High Ticket).",
-      },
-    ],
-    rating: 5,
-    satisfaction: "10/10",
-  },
-  {
-    id: 3,
-    name: "Gianpiero Fusco « El Tigre »",
-    videoId: "62rc07fz7v",
-    thumbnail:
-      "https://framerusercontent.com/images/4mBdj9mg0FN3ecinEUKwUgnBslc.png",
-    achievements: [
-      {
-        text: "Creación de equipo de alto rendimiento ",
-        highlight: "(+12 integrantes).",
-      },
-      "Reestructuración de todo el Frontend & Backend de procesos.",
-      {
-        text: "Escalado de dos comunidades de Skool ",
-        highlight: "(+7k Miembros en total).",
-      },
-      {
-        text: "Armado de infoproducto ",
-        highlight: "(+240 Ventas Mid Ticket).",
-      },
+      "Me diste muchísima claridad para crear mi oferta high ticket",
     ],
     rating: 5,
     satisfaction: "10/10",
   },
   {
     id: 4,
-    name: "Beñat Sanz",
+    name: "Beñat Sanz | Consultor MKT",
     videoId: "t24sjyaxgz",
     thumbnail:
       "https://framerusercontent.com/images/4mBdj9mg0FN3ecinEUKwUgnBslc.png",
@@ -76,52 +44,44 @@ export const testimonials = [
   },
   {
     id: 5,
-    name: "Oier Altuna",
+    name: "Oier Altuna | Coach Fitness",
     videoId: "4v7yqdnawt",
     thumbnail:
       "https://framerusercontent.com/images/4mBdj9mg0FN3ecinEUKwUgnBslc.png",
-    achievements: ["Comentario de cómo se siente trabajar conmigo"],
+    achievements: ["Trabajar con Fran es una locura, es el put# amo"],
     rating: 5,
     satisfaction: "10/10",
     isHorizontal: true,
   },
   {
-    id: 6,
-    name: "Andrés Roman | Rivers Strategy",
-    videoId: "dcmtxo6qnk",
+    id: 10,
+    name: "Andrés Muentes | Agencia IA",
+    videoId: "j2fg9nyxcs",
     thumbnail:
       "https://framerusercontent.com/images/4mBdj9mg0FN3ecinEUKwUgnBslc.png",
     achievements: [
-      "Claridad de los movimientos a realizar con su agencia en 2025.",
-      {
-        text: "Actualización de su Frontend ",
-        highlight: "(Adquisición & Ventas).",
-      },
-      {
-        text: "Armado de servicio de contenido DFY ",
-        highlight: "(High Ticket).",
-      },
+      "Te dice que va a darte un resultado y te da muchísimo más.",
     ],
     rating: 5,
     satisfaction: "10/10",
   },
   {
+    id: 6,
+    name: "Martín Chazarreta | Consultor B2B",
+    videoId: "dcmtxo6qnk",
+    thumbnail:
+      "https://framerusercontent.com/images/4mBdj9mg0FN3ecinEUKwUgnBslc.png",
+    achievements: ["Tiene un ojo crítico para ver cosas que nadie más ve."],
+    rating: 5,
+    satisfaction: "10/10",
+  },
+  {
     id: 7,
-    name: "Andrés Roman | Rivers Strategy",
+    name: "Andrés Román | Agencia DFY",
     videoId: "x8j83cvbo4",
     thumbnail:
       "https://framerusercontent.com/images/4mBdj9mg0FN3ecinEUKwUgnBslc.png",
-    achievements: [
-      "Claridad de los movimientos a realizar con su agencia en 2025.",
-      {
-        text: "Actualización de su Frontend ",
-        highlight: "(Adquisición & Ventas).",
-      },
-      {
-        text: "Armado de servicio de contenido DFY ",
-        highlight: "(High Ticket).",
-      },
-    ],
+    achievements: ["Pasé a duplicar mis ingresos en menos de un mes."],
     rating: 5,
     satisfaction: "10/10",
   },
@@ -132,33 +92,19 @@ export const testimonials = [
     thumbnail:
       "https://framerusercontent.com/images/4mBdj9mg0FN3ecinEUKwUgnBslc.png",
     achievements: [
-      "Claridad de los movimientos a realizar con su agencia en 2025.",
-      {
-        text: "Armado de organigrama empresarial ",
-        highlight: "(+7 Personas).",
-      },
-      "Desglose de sistema de entrega high ticket.",
-      "(Ahora puede atender a +10 clientes nuevos sin perder resultados.)",
+      "Me ayudó a organizarme mejor y a mejorar mi entrega de servicios.",
     ],
     rating: 5,
     satisfaction: "10/10",
   },
   {
     id: 9,
-    name: "Agus Buccieri | Content Creator",
+    name: "Agus Buccieri | Agencia DFY",
     videoId: "o5nnbwgmji",
     thumbnail:
       "https://framerusercontent.com/images/4mBdj9mg0FN3ecinEUKwUgnBslc.png",
     achievements: [
-      "Claridad de los movimientos a realizar con su agencia en 2025.",
-      {
-        text: "Creación de Frontend desde cero ",
-        highlight: "(Adquisición & Ventas).",
-      },
-      {
-        text: "Armado de servicio de contenido ",
-        highlight: "(Con Transición a High Ticket).",
-      },
+      "La entrega de Fran es impecable, te hace escalar sin esfuerzo.",
     ],
     rating: 5,
     satisfaction: "10/10",

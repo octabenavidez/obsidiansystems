@@ -43,6 +43,7 @@ const MediaDisplay = ({
   className = "",
   height = "h-[600px]",
   rounded = "rounded-2xl",
+  fit = "cover", // "cover" | "contain"
   autoPlay = true,
   loop = true,
   muted = true,
@@ -62,7 +63,7 @@ const MediaDisplay = ({
       {type === "video" ? (
         <video
           src={src}
-          className={`h-full w-full object-cover ${rounded}`}
+          className={`h-full w-full ${fit === "contain" ? "object-contain" : "object-cover"} ${rounded}`}
           autoPlay={autoPlay}
           loop={loop}
           muted={muted}
@@ -74,7 +75,7 @@ const MediaDisplay = ({
         <img
           src={src}
           alt={alt || "Media content"}
-          className={`h-full w-full object-cover ${rounded}`}
+          className={`h-full w-full ${fit === "contain" ? "object-contain" : "object-cover"} ${rounded}`}
           loading="lazy"
         />
       )}

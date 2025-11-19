@@ -8,11 +8,11 @@ const ClientsSection = () => {
       <div className="mx-auto max-w-7xl">
         {/* === Section Header === */}
         <RevealOnScroll direction="up" delay={0.2}>
-          <div className="mb-16 space-y-4 text-center">
+          <div className="mb-16 space-y-4 pt-28 text-center">
             <div className="mb-6 flex items-center justify-center gap-3">
               <Users className="h-10 w-10 text-[#aca377]" />
             </div>
-            <h2 className="text-5xl leading-tight font-bold tracking-tight md:text-6xl">
+            <h2 className="text-6xl leading-tight font-bold tracking-tight">
               Algunos Clientes
               <br />
               Que Trabajan Conmigo
@@ -21,7 +21,7 @@ const ClientsSection = () => {
         </RevealOnScroll>
 
         {/* === Clients Grid === */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {clientes.map((cliente, i) => (
             <RevealOnScroll
               key={i}
@@ -29,23 +29,24 @@ const ClientsSection = () => {
               delay={0.1 * (i + 1)}
             >
               <div className="group relative">
-                <div className="relative overflow-hidden rounded-2xl border border-zinc-800 bg-gradient-to-br from-zinc-900 to-black transition-all duration-500 hover:border-[#aca377] hover:shadow-[0_0_40px_rgba(172,163,119,0.3)]">
-                  <div className="relative h-[400px] overflow-hidden">
+                <div className="relative overflow-hidden rounded-2xl border border-zinc-800/80 bg-gradient-to-br from-zinc-900 to-black transition-all duration-500 hover:border-[#aca377] hover:shadow-[0_0_30px_rgba(172,163,119,0.25)]">
+                  <div className="relative h-[300px] overflow-hidden sm:h-[320px]">
                     <img
                       src={cliente.imagen}
                       alt={cliente.nombre}
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      style={{ objectPosition: cliente.position || "center" }}
                     />
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-80"></div>
                   </div>
 
-                  <div className="absolute right-0 bottom-0 left-0 p-6">
+                  <div className="absolute right-0 bottom-0 left-0 p-4">
                     <div className="relative">
-                      <h3 className="mb-1 transform text-xl font-bold text-white transition-transform duration-300 group-hover:translate-y-[-4px]">
+                      <h3 className="mb-0.5 transform text-lg font-bold text-white transition-transform duration-300 group-hover:translate-y-[-3px]">
                         {cliente.nombre}
                       </h3>
-                      <div className="h-1 w-16 origin-left scale-x-0 transform rounded-full bg-[#aca377] transition-transform duration-500 group-hover:scale-x-100"></div>
+                      <div className="h-0.5 w-12 origin-left scale-x-0 transform rounded-full bg-[#aca377] transition-transform duration-500 group-hover:scale-x-100"></div>
                     </div>
                   </div>
 
