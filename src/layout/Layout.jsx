@@ -7,8 +7,9 @@ import Footer from "./Footer";
 const Layout = ({ children }) => {
   return (
     <>
-      <div className="flex min-h-screen flex-col bg-[#0a0a0a] px-12 py-7 text-white md:px-24 md:py-14">
-        <main className="grow">{children}</main>
+      <div className="flex min-h-screen flex-col bg-[#0a0a0a] text-white">
+        <main className="grow py-7 md:py-14">{children}</main>
+        {/* <main className="grow px-12 py-7 md:px-24 md:py-14">{children}</main> */}
       </div>
       <Footer />
     </>
