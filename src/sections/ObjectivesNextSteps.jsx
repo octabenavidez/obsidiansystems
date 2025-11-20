@@ -145,21 +145,52 @@ const ObjectivesNextSteps = () => {
           <RevealOnScroll direction="up" delay={0.2}>
             <div>
               <div className="mb-16 space-y-6 text-center">
-                <h2 className="bg-gradient-to-r from-white via-[#aca377] to-white bg-clip-text text-6xl font-bold tracking-tight text-transparent">
+                <h2 className="bg-gradient-to-r from-white via-[#aca377] to-white bg-clip-text text-4xl md:text-6xl font-bold tracking-tight text-transparent">
                   Próximos Pasos
                 </h2>
                 <p className="mx-auto max-w-2xl text-lg leading-relaxed text-gray-400 md:text-xl">
                   El camino es simple, directo y diseñado para tu éxito
                 </p>
               </div>
-              <div className="mx-auto max-w-4xl space-y-8">
+              <div className="mx-auto max-w-4xl space-y-8 md:space-y-8">
                 {steps.map((step, i) => (
                   <div key={i} className="group relative">
+                    {/* Mobile: Vertical connector line centered */}
                     {i < steps.length - 1 && (
-                      <div className="absolute top-[120px] left-[70px] h-[calc(100%+32px)] w-1 bg-gradient-to-b from-[#aca377] to-zinc-800"></div>
+                      <>
+                        <div className="absolute left-1/2 top-[100px] hidden h-[calc(100%+16px)] w-1 -translate-x-1/2 bg-gradient-to-b from-[#aca377] to-zinc-800 md:hidden"></div>
+                        {/* Desktop: Horizontal connector line */}
+                        <div className="absolute top-[70px] left-[75px] hidden h-[calc(100%+32px)] w-1 bg-gradient-to-b from-[#aca377] to-zinc-800 md:block"></div>
+                      </>
                     )}
 
-                    <div className="flex items-start gap-8">
+                    {/* Mobile Layout: Vertical Stack */}
+                    <div className="flex flex-col items-center gap-6 md:hidden">
+                      {/* Number Badge - Mobile */}
+                      <div className="relative flex h-24 w-24 shrink-0 items-center justify-center rounded-3xl bg-gradient-to-br from-[#aca377] to-[#8a8555] shadow-[0_0_40px_rgba(172,163,119,0.4)] transition-transform duration-500 group-hover:scale-110">
+                        <span className="text-center text-4xl font-black text-black">
+                          {step.number}
+                        </span>
+                      </div>
+
+                      {/* Content Card - Mobile */}
+                      <div className="w-full rounded-3xl border border-zinc-800 bg-gradient-to-br from-zinc-900 to-black p-6 transition-all duration-500 group-hover:border-[#aca377] group-hover:shadow-[0_0_40px_rgba(172,163,119,0.2)]">
+                        <div className="mb-3 text-center">
+                          <span className="text-lg font-bold text-[#aca377]">
+                            {step.label}
+                          </span>
+                        </div>
+                        <h3 className="mb-4 text-center text-2xl font-bold text-white">
+                          {step.title}
+                        </h3>
+                        <p className="text-base leading-relaxed text-gray-400">
+                          {step.description}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Desktop Layout: Horizontal */}
+                    <div className="hidden items-start gap-8 md:flex">
                       <div className="relative flex h-[140px] w-[150px] shrink-0 items-center justify-center rounded-3xl bg-gradient-to-br from-[#aca377] to-[#8a8555] shadow-[0_0_40px_rgba(172,163,119,0.4)] transition-transform duration-500 group-hover:scale-110">
                         <span className="px-4 text-center text-5xl font-black text-black">
                           {step.number}

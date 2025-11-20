@@ -19,7 +19,7 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="px-4 pt-24 text-white">
+    <section className="overflow-x-hidden px-4 pt-24 text-white">
       <div className="mx-auto max-w-7xl">
         {/* === Section Header === */}
         <RevealOnScroll direction="up" delay={0.2}>
@@ -36,7 +36,7 @@ const TestimonialsSection = () => {
         {/* === Testimonials List === */}
 
         {/* Horizontals first: now in two columns */}
-        <div className="grid gap-6 lg:grid-cols-2">
+        <div className="grid gap-6 lg:grid-cols-2" style={{ minWidth: 0 }}>
           {horizontals.map((testimonial, index) => (
             <RevealOnScroll
               key={testimonial.id}
@@ -55,14 +55,19 @@ const TestimonialsSection = () => {
                 </div>
 
                 {/* Video */}
-                <div className="mt-4 flex-1">
+                <div className="mt-4 flex-1" style={{ minWidth: 0 }}>
                   <div className="relative w-full overflow-hidden rounded-2xl bg-zinc-800/70 shadow-2xl ring-1 ring-zinc-700">
                     <iframe
                       src={`https://fast.wistia.net/embed/iframe/${testimonial.videoId}?seo=false&videoFoam=true`}
                       title={`Testimonio de ${testimonial.name}`}
                       allow="autoplay; fullscreen"
                       className="aspect-video h-full w-full"
-                      style={{ border: "none", borderRadius: "0.75rem" }}
+                      style={{ 
+                        border: "none", 
+                        borderRadius: "0.75rem",
+                        maxWidth: "100%",
+                        width: "100%"
+                      }}
                     ></iframe>
                   </div>
                 </div>
@@ -95,7 +100,7 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Verticals: stacked cards */}
-        <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4" style={{ minWidth: 0 }}>
           {verticals.map((testimonial, i) => (
             <RevealOnScroll
               key={testimonial.id}
@@ -112,14 +117,19 @@ const TestimonialsSection = () => {
                   <div className="h-0.5 flex-1 rounded-full bg-zinc-700/40"></div>
                 </div>
 
-                <div className="mt-3 flex-1">
+                <div className="mt-3 flex-1" style={{ minWidth: 0 }}>
                   <div className="relative w-full overflow-hidden rounded-2xl bg-zinc-800/70 shadow-2xl ring-1 ring-zinc-700">
                     <iframe
                       src={`https://fast.wistia.net/embed/iframe/${testimonial.videoId}?seo=false&videoFoam=true`}
                       title={`Testimonio de ${testimonial.name}`}
                       allow="autoplay; fullscreen"
                       className="aspect-9/16 h-full w-full"
-                      style={{ border: "none", borderRadius: "0.75rem" }}
+                      style={{ 
+                        border: "none", 
+                        borderRadius: "0.75rem",
+                        maxWidth: "100%",
+                        width: "100%"
+                      }}
                     ></iframe>
                   </div>
                 </div>

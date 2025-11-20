@@ -12,7 +12,7 @@ const ClientsSection = () => {
             <div className="mb-6 flex items-center justify-center gap-3">
               <Users className="h-10 w-10 text-[#aca377]" />
             </div>
-            <h2 className="text-6xl leading-tight font-bold tracking-tight">
+            <h2 className="text-4xl md:text-6xl leading-tight font-bold tracking-tight">
               Algunos Clientes
               <br />
               Que Trabajan Conmigo
