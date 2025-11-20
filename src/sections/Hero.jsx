@@ -6,9 +6,9 @@ import { resultImages } from "../data/heroImages";
 
 const Hero = () => {
   return (
-    <section className="relative flex flex-col gap-9 overflow-hidden text-center text-white">
+    <section className="relative flex flex-col gap-9 overflow-hidden px-4 text-center text-white md:px-6 lg:px-8">
       {/* === Hero Section with Background Image === */}
-      <div className="relative flex min-h-[calc(100vh-80px)] w-full flex-col">
+      <div className="relative flex w-full flex-col md:min-h-[calc(100vh-80px)]">
         {/* === Content with relative z-index === */}
         <div className="relative z-10 flex flex-col gap-9">
           {/* === Logo === */}
@@ -31,7 +31,7 @@ const Hero = () => {
 
           {/* === Main Headline === */}
           <RevealOnScroll direction="up" delay={0.2}>
-            <h1 className="font-instrument mx-auto max-w-[1300px] text-center text-6xl leading-[1.1em] font-bold tracking-[-0.7px] text-white capitalize">
+            <h1 className="font-instrument mx-auto max-w-[1300px] text-[23px] text-center md:text-6xl leading-[1.1em] font-bold tracking-[-0.7px] text-white capitalize">
               Lleva al máximo tu Adquisición & Fundamentos{" "}
               <span className="lg:whitespace-nowrap">
                 y Crece tu Facturación En 4 Meses
@@ -41,7 +41,7 @@ const Hero = () => {
 
           {/* === Subheadline === */}
           <RevealOnScroll direction="up" delay={0.3}>
-            <p className="mx-auto max-w-6xl text-center text-[25px] leading-[1.2em] font-medium text-white">
+            <p className="mx-auto max-w-6xl text-center text-[18px] md:text-[25px] leading-[1.2em] font-medium text-white">
               Voy a asegurarme de que cada componente de tu empresa esté{" "}
               <span className="text-[#aca377]">100% optimizado</span> para sumar
               y sostener{" "}
@@ -59,7 +59,7 @@ const Hero = () => {
               src="https://4kwallpapers.com/images/wallpapers/business-barcode-2560x1080-16395.png"
               alt="Obsidian Systems preview"
               type="image"
-              height="h-[max(500px,calc(100vh-500px))]"
+              height="h-[40vh]  sm:h-[250px] md:h-[300px] lg:h-[400px]"
               className="mx-auto w-full max-w-[1200px]"
               fit="cover"
             />
@@ -67,7 +67,7 @@ const Hero = () => {
 
           {/* === Social Proof / Rating === */}
           <RevealOnScroll direction="up" delay={0.5}>
-            <div className="flex items-center justify-center space-y-3">
+            <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:gap-3">
               <div className="flex items-center justify-center gap-0.5">
                 {[
                   "https://framerusercontent.com/images/hZqbByVBLz8LCpGyzqlf4GtaDA.png",
@@ -85,7 +85,7 @@ const Hero = () => {
                 ))}
               </div>
 
-              <div className="flex flex-col items-start justify-start px-2">
+              <div className="flex flex-col items-center justify-center md:items-start md:px-2">
                 <span className="text-[#ffae00]">★★★★★</span>
                 <p className="text-sm font-semibold tracking-tight text-[#ffae00]">
                   5 de 5 Estrellas!
@@ -134,7 +134,7 @@ const Hero = () => {
                       playsInline
                       disablePictureInPicture
                       controlsList="nodownload nofullscreen noremoteplayback"
-                      className="h-[400px] w-full object-cover"
+                      className="md:h-[400px] w-full object-cover"
                     />
                   ) : (
                     <ModalImage
@@ -142,7 +142,7 @@ const Hero = () => {
                       large={src}
                       hideDownload={true}
                       hideZoom={true}
-                      className="h-[400px] w-full cursor-pointer object-cover transition-transform duration-300 hover:scale-105"
+                      className="md:h-[400px] w-full cursor-pointer object-cover transition-transform duration-300 hover:scale-105"
                     />
                   )}
                 </div>

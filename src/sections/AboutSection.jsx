@@ -140,11 +140,11 @@ const AboutSection = () => {
 
   return (
     <section className="overflow-hidden px-6 pt-28 text-white">
-      <div className="mx-auto max-w-[90%] space-y-10">
+      <div className="mx-auto md:max-w-[90%] space-y-10">
         {/* === Section Title === */}
         <RevealOnScroll direction="up" delay={0.3}>
           <div className="text-center">
-            <h2 className="text-6xl font-bold tracking-tight">
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
               ¿Para quién es este programa?
             </h2>
           </div>
@@ -152,9 +152,9 @@ const AboutSection = () => {
 
         {/* === Description === */}
         <RevealOnScroll direction="up" delay={0.5}>
-          <p className="mt-4 text-center text-xl leading-relaxed text-gray-300">
+          <p className="mt-4 text-center text-[20px] md:text-xl leading-relaxed text-gray-300">
             Es para{" "}
-            <span className="text-2xl font-bold text-[#aca377]">
+            <span className="text-[22px] md:text-2xl font-bold text-[#aca377]">
               Consultores B2B
             </span>{" "}
             que están facturando mínimamente <br />
@@ -204,12 +204,12 @@ const AboutSection = () => {
               {notWhatItIs.map((item, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-3 rounded-lg p-2 transition-all duration-300"
+                  className="flex items-start gap-3 rounded-lg p-2 transition-all duration-300"
                 >
-                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-red-500/20 ring-1 ring-red-500/30 transition-all duration-300 group-hover:ring-red-400/60">
-                    <span className="font-bold text-red-400">✕</span>
+                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-500/20 ring-1 ring-red-500/30 transition-all duration-300 group-hover:ring-red-400/60">
+                    <span className="text-base font-bold leading-none text-red-400">✕</span>
                   </div>
-                  <p className="text-lg text-gray-200 transition-colors duration-300 group-hover:text-white">
+                  <p className="pt-0.5 text-lg leading-relaxed text-gray-200 transition-colors duration-300 group-hover:text-white">
                     {item}
                   </p>
                 </div>
@@ -230,12 +230,12 @@ const AboutSection = () => {
               {whatItIs.map((item, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-4 rounded-lg p-2 transition-all duration-300"
+                  className="flex items-start gap-4 rounded-lg p-2 transition-all duration-300"
                 >
-                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#aca377]/20 ring-1 ring-[#aca377]/30 transition-all duration-300 group-hover:ring-[#e5dcb6]/80">
-                    <Check className="h-6 w-6 text-[#aca377]" />
+                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#aca377]/20 ring-1 ring-[#aca377]/30 transition-all duration-300 group-hover:ring-[#e5dcb6]/80">
+                    <Check className="h-4 w-4 text-[#aca377]" />
                   </div>
-                  <p className="text-lg font-medium text-white transition-colors duration-300 group-hover:text-[#f4edd3]">
+                  <p className="pt-0.5 text-lg font-medium leading-relaxed text-white transition-colors duration-300 group-hover:text-[#f4edd3]">
                     {item}
                   </p>
                 </div>
@@ -430,7 +430,7 @@ const AboutSection = () => {
         {/* === Results Section === */}
         <RevealOnScroll direction="up" delay={1}>
           <div className="space-y-10 text-center">
-            <h2 className="text-6xl font-bold tracking-tight">
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
               ¿Qué resultados voy a alcanzar?
             </h2>
             <div className="mx-auto grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:max-w-[85%]">

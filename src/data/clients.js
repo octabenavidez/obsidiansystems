@@ -5,8 +5,8 @@ export const clientes = [
     position: "center top",
   },
   {
-    nombre: "Rhansel Acevedo",
-    imagen: "/src/assets/images/clients-images/rhansel.png",
+    nombre: "Paolo Malavasi",
+    imagen: "/src/assets/images/clients-images/paolo.jpg",
     position: "center top",
   },
   {

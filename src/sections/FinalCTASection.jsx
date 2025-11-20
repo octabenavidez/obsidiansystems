@@ -16,9 +16,9 @@ const FinalCTASection = () => {
             <div>
               <div className="flex items-start justify-center gap-4">
                 <AlertCircle className="mt-2 h-8 w-8 flex-shrink-0 text-[#aca377]" />
-                <h2 className="text-left text-xl leading-relaxed font-medium lg:text-2xl">
-                  <span className="font-bold text-[#aca377]">PD: </span>
-                  <span className="font-bold">
+                <h2 className="text-left text-lg font-bold leading-relaxed font-medium lg:text-2xl">
+                  <span className="text-[#aca377]">PD: </span>
+                  <span>
                     Esto NO es FOMO: literalmente solo trabajo con 3 clientes
                     nuevos por mes. Cuando entran, asumo sus negocios como
                     propios para garantizarles resultados increíbles lo más
