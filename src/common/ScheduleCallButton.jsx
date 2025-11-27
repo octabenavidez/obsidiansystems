@@ -15,7 +15,7 @@
 
 const ScheduleCallButton = ({
   href = "#",
-  label = "AGENDAR UNA LLAMADA →",
+  label = "QUIERO VER SI APLICO →",
   className = "",
   newTab = true,
 }) => {

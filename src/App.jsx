@@ -12,7 +12,7 @@ function App() {
     <>
       <Layout>
         <Hero />
-        <AboutSection />
+        <AboutSection /> 
         <ClientsSection />
         <ObjectivesNextSteps />
         <TestimonialsSection />

@@ -1,16 +1,18 @@
-import { Check, Play } from "lucide-react";
 import RevealOnScroll from "../common/RevealOnScroll";
 import ModalImage from "react-modal-image";
-import MediaDisplay from "../common/MediaDisplay";
 import ScheduleCallButton from "../common/ScheduleCallButton";
 import { resultImages } from "../data/aboutImages";
+
+import { Crown, Smile, Trophy, Shell, Check } from "lucide-react";
+import fran1 from "../assets/images/fran1.webp";
+import fran2 from "../assets/images/fran 2.webp";
 
 const AboutSection = () => {
   const painPoints = [
     {
-      title: "Adquisición y posicionamiento trabados",
+      title: "Posicionamiento y mensaje confuso",
       description:
-        "Tienes problemas en adquisición de leads, oferta o posicionamiento que frenan tu crecimiento.",
+        "Sabés que podrías posicionarte mejor, pero tu mensaje hoy no refleja lo que realmente sos capaz de lograr.",
     },
     {
       title: "Cero claridad sobre el siguiente paso",
@@ -18,14 +20,14 @@ const AboutSection = () => {
         "Sientes falta de claridad sobre qué priorizar o cómo estructurar tu siguiente jugada para escalar tu negocio.",
     },
     {
-      title: "Sientes que fuiste creado para algo grande.",
+      title: "Adquisición y oferta trabados",
       description:
-        "Tienes por dentro esa convicción de que estás destinado a dejar una huella en tu industria.",
+        "Sentís que podrías vender más, pero algo en tu oferta o adquisición no termina de encajar.",
     },
     {
       title: "Desorden en tu entrega y servicio.",
       description:
-        "Tu entrega y experiencia del cliente no está optimizada y se siente desorganizada por dentro.",
+        "Tu entrega y experiencia del cliente es buena, pero sabés que podría estar mucho más ordenada.",
     },
     {
       title: "Sin métricas ni sistemas para decidir",
@@ -45,120 +47,59 @@ const AboutSection = () => {
     {
       title: "Quieres resultados, no información.",
       description:
-        "Pagaste por varias mentorías, pero aun así reconoces que más información no te hace avanzar.",
+        "No querés otro curso, ya los tienes a todos. Buscas a alguien que se meta 1-1 en tu negocio y te haga avanzar.",
     },
   ];
 
-  const notWhatItIs = [
-    "NO es un infoproducto.",
-    "NO es un roadmap “copy-paste” vendido en masa.",
-    "NO es un Mastermind grupal.",
-  ];
-
-  const whatItIs = [
-    "Un 1-1 donde adapto mi servicio a tu negocio en particular.",
-    "Un Trabajo centrado en cada componente de la empresa para optimizarla.",
-    "Una solución Diferente, Rápida y Más Inteligente que las demás.",
-  ];
-
-  const planFeatures = [
+  const objectives = [
     {
-      text: "BluePrint Adaptado: Sesión individual con Fran para crear el roadmap que vamos a seguir durante los meses del programa.",
-      highlighted: true,
-      type: "base",
+      icon: <Crown className="h-8 w-8 md:h-9 md:w-9 lg:h-10 lg:w-10" />,
+      title: "Posicionado en tu mercado",
+      description:
+        "Ya no te miran como un NPC, ahora eres la única opción lógica en la cabeza de tu cliente y comienzas a cobrar por lo que vales.",
     },
     {
-      text: "Bóveda OPS 50K: +10 Hrs de Entregables Pre-grabados para solucionar cada futuro problema que pueda surgir.",
-      highlighted: true,
-      type: "base",
+      icon: <Trophy className="h-8 w-8 md:h-9 md:w-9 lg:h-10 lg:w-10" />,
+      title: "Darás mejores resultados a tus clientes",
+      description:
+        "Tendrás todas las estructuras de servicio necesarias para aumentar tu capacidad de entrega y resultados.",
     },
     {
-      text: "Acompañamiento: 2 sesiones 1-1 por semana con Fran. Para aumentar claridad de acciones, enfoque y productividad.",
-      highlighted: true,
-      type: "base",
+      icon: <Shell className="h-8 w-8 md:h-9 md:w-9 lg:h-10 lg:w-10" />,
+      title: "Ecosistema de contenido propio",
+      description:
+        "Crear un ecosistema de contenido evergreen que atrae clientes premium todos los días.",
     },
     {
-      text: "Hermandad: Podés hablar con total seguridad 24/7 directamente al chat privado de Fran (respondo muy rápido)",
-      highlighted: true,
-      type: "base",
-    },
-    {
-      text: "Fundamentos / Oferta / Entrega",
-      highlighted: false,
-      type: "special",
-    },
-    {
-      text: "Posicionamiento / Mensaje",
-      highlighted: false,
-      type: "special",
-    },
-    {
-      text: "Adquisición / Marketing",
-      highlighted: false,
-      type: "special",
-    },
-    {
-      text: "Sistemas de Nutrición: TOF + MOF + BOF",
-      highlighted: false,
-      type: "special",
-    },
-    {
-      text: "Conversión / Ventas",
-      highlighted: false,
-      type: "special",
-    },
-    {
-      text: "Equipo / Talento / Alto Rendimiento",
-      highlighted: false,
-      type: "special",
-    },
-    {
-      text: "Instalación de CRM Adaptado al negocio [Airtable]",
-      highlighted: false,
-      type: "bonus",
-      number: 1,
-    },
-    {
-      text: "Sesiones ilimitadas con Fran cuando lo requieras",
-      highlighted: false,
-      type: "bonus",
-      number: 2,
+      icon: <Smile className="h-8 w-8 md:h-9 md:w-9 lg:h-10 lg:w-10" />,
+      title: "Disfrutarás el proceso",
+      description:
+        "Aumentaremos tu enfoque y productividad para que escalar sea más claro, confiado y, sobre todo, disfrutable.",
     },
   ];
-
-  const basePlanFeatures = planFeatures.filter(
-    (feature) => feature.type === "base",
-  );
-  const specialPlanFeatures = planFeatures.filter(
-    (feature) => feature.type === "special",
-  );
-  const bonusFeatures = planFeatures.filter(
-    (feature) => feature.type === "bonus",
-  );
-
-  const planPricing = ["Pago único de $3500 USD", "2 pagos de $2100 USD"];
 
   return (
     <section className="overflow-hidden px-6 pt-28 text-white">
-      <div className="mx-auto md:max-w-[90%] space-y-10">
+      <div className="mx-auto space-y-10 md:max-w-[90%]">
         {/* === Section Title === */}
         <RevealOnScroll direction="up" delay={0.3}>
           <div className="text-center">
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-              ¿Para quién es este programa?
+            <h2 className="text-4xl font-bold tracking-tight md:text-6xl">
+              Si estás aquí, es muy probable que algo de <br /> lo que voy a
+              decir resuene fuerte con vos:
             </h2>
           </div>
         </RevealOnScroll>
 
         {/* === Description === */}
         <RevealOnScroll direction="up" delay={0.5}>
-          <p className="mt-4 text-center text-[20px] md:text-xl leading-relaxed text-gray-300">
-            Es para{" "}
-            <span className="text-[22px] md:text-2xl font-bold text-[#aca377]">
+          <p className="mt-4 text-center text-[20px] text-white md:text-[25px]">
+            Eres un{" "}
+            <span className="text-[22px] font-bold text-[#aca377] md:text-[27px]">
               Consultores B2B
             </span>{" "}
-            que están facturando mínimamente <br />
-            $10,000 USD al mes, y se identifican con lo siguiente:
+            que está facturando mínimamente <br />
+            $10,000 USD al mes, y te identificas con lo siguiente:
           </p>
         </RevealOnScroll>
 
@@ -186,251 +127,82 @@ const AboutSection = () => {
           </div>
         </RevealOnScroll>
 
-        {/* === What It Is and What It Isn't === */}
-        <RevealOnScroll direction="up" delay={0.7}>
-          <div className="mx-auto grid grid-cols-1 gap-6 lg:grid-cols-2 xl:max-w-[90%]">
-            {/* Not What It Is */}
-            <div className="group relative overflow-hidden rounded-2xl border border-red-900/30 bg-gradient-to-br from-red-950/30 to-black p-8 shadow-[0_0_30px_rgba(239,68,68,0.12)] transition-all duration-300 hover:-translate-y-1 hover:border-red-400/60 hover:shadow-[0_12px_40px_rgba(239,68,68,0.25)]">
-              <div
-                className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                style={{
-                  background:
-                    "radial-gradient(circle at 20% 20%, rgba(239,68,68,0.12), transparent 35%)",
-                }}
-              />
-              <h3 className="mb-4 text-2xl font-semibold text-red-400">
-                Esto NO es:
-              </h3>
-              {notWhatItIs.map((item, i) => (
-                <div
-                  key={i}
-                  className="flex items-start gap-3 rounded-lg p-2 transition-all duration-300"
-                >
-                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-500/20 ring-1 ring-red-500/30 transition-all duration-300 group-hover:ring-red-400/60">
-                    <span className="text-base font-bold leading-none text-red-400">✕</span>
-                  </div>
-                  <p className="pt-0.5 text-lg leading-relaxed text-gray-200 transition-colors duration-300 group-hover:text-white">
-                    {item}
-                  </p>
-                </div>
-              ))}
+        {/* === Objectives Section === */}
+        <section className="mx-auto my-20 space-y-8 md:space-y-10 xl:max-w-[90%]">
+          {/* === Section Header === */}
+          <RevealOnScroll direction="up" delay={0.2}>
+            <div className="space-y-4 text-center">
+              <h2 className="bg-gradient-to-r from-white via-[#aca377] to-white bg-clip-text text-4xl leading-tight font-bold tracking-tight text-transparent md:text-5xl lg:text-6xl">
+                Lo que quieres es claro:
+              </h2>
+              {/* <p className="mx-auto max-w-3xl text-lg leading-relaxed text-gray-400 md:text-xl lg:text-2xl">
+                Para cuando termines de trabajar conmigo
+              </p> */}
             </div>
-            {/* What It Is */}
-            <div className="group relative overflow-hidden rounded-2xl border border-[#aca377]/30 bg-gradient-to-br from-[#aca377]/10 to-black p-8 shadow-[0_0_30px_rgba(172,163,119,0.18)] transition-all duration-300 hover:-translate-y-1 hover:border-[#e5dcb6]/70 hover:shadow-[0_12px_40px_rgba(172,163,119,0.25)]">
-              <div
-                className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                style={{
-                  background:
-                    "radial-gradient(circle at 80% 20%, rgba(172,163,119,0.15), transparent 35%)",
-                }}
-              />
-              <h3 className="mb-4 text-2xl font-semibold text-[#aca377]">
-                Esto SI es:
-              </h3>
-              {whatItIs.map((item, i) => (
-                <div
-                  key={i}
-                  className="flex items-start gap-4 rounded-lg p-2 transition-all duration-300"
-                >
-                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#aca377]/20 ring-1 ring-[#aca377]/30 transition-all duration-300 group-hover:ring-[#e5dcb6]/80">
-                    <Check className="h-4 w-4 text-[#aca377]" />
-                  </div>
-                  <p className="pt-0.5 text-lg font-medium leading-relaxed text-white transition-colors duration-300 group-hover:text-[#f4edd3]">
-                    {item}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </RevealOnScroll>
+          </RevealOnScroll>
 
-        {/* === Investment Plans (two-column) === */}
-        <div className="mx-auto flex min-h-screen items-center justify-center py-4 md:py-6 lg:py-8 xl:max-w-[90%] xl:py-10 2xl:py-28">
-          <div className="grid w-full grid-cols-1 items-stretch gap-6 lg:grid-cols-2 lg:gap-8 xl:gap-10">
-            <RevealOnScroll direction="up" delay={0.7}>
-              <div className="flex h-full w-full flex-col">
-                <h2 className="mb-3 text-center text-4xl font-bold tracking-tight md:mb-4 md:text-5xl lg:mb-5 lg:text-6xl xl:mb-6 xl:text-6xl 2xl:mb-8 2xl:text-7xl">
-                  Así Funciona
+          {/* === Results Statement === */}
+          <RevealOnScroll direction="up" delay={0.3}>
+            <div className="relative">
+              <div className="absolute inset-0 bg-linear-to-r from-[#aca377]/20 via-[#aca377]/5 to-[#aca377]/20 blur-3xl"></div>
+              <div className="relative rounded-3xl border border-[#aca377]/50 bg-gradient-to-br from-zinc-900 to-black p-8 text-center md:p-10">
+                <h2 className="mb-4 bg-linear-to-r from-white via-[#aca377] to-white bg-clip-text text-3xl font-bold tracking-tight text-transparent md:text-4xl">
+                  Resultados monetarios
                 </h2>
-
-                <div className="flex flex-1 flex-col gap-2.5 md:gap-3 lg:gap-4 xl:gap-5 2xl:gap-6">
-                  {/* Paso 1 */}
-                  <div className="group relative rounded-2xl border border-[#aca377]/30 bg-gradient-to-br from-[#aca377]/10 to-black p-3.5 transition-all duration-300 hover:shadow-[0_0_30px_rgba(172,163,119,0.3)] md:p-4 lg:p-5 xl:p-6 2xl:p-7">
-                    <div className="mb-1 flex items-center justify-between gap-3 md:mb-1.5 md:gap-4">
-                      <h3 className="text-lg font-bold text-[#aca377] md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
-                        Simplificar
-                      </h3>
-                      <span className="rounded-full bg-[#aca377] px-3 py-0.5 text-[10px] font-bold tracking-wide text-black uppercase md:px-4 md:py-1 md:text-xs lg:px-5 lg:py-1.5 lg:text-sm 2xl:px-6 2xl:py-2 2xl:text-base">
-                        Paso 1
-                      </span>
-                    </div>
-                    <p className="text-sm text-gray-300 md:text-base lg:text-lg xl:text-lg 2xl:text-xl">
-                      Fundamentos y Entrega
-                    </p>
-                  </div>
-
-                  {/* Paso 2 */}
-                  <div className="group relative rounded-2xl border border-[#aca377]/30 bg-gradient-to-br from-[#aca377]/10 to-black p-3.5 transition-all duration-300 hover:shadow-[0_0_30px_rgba(172,163,119,0.3)] md:p-4 lg:p-5 xl:p-6 2xl:p-7">
-                    <div className="mb-1 flex items-center justify-between gap-3 md:mb-1.5 md:gap-4">
-                      <h3 className="text-lg font-bold text-[#aca377] md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
-                        Sistematizar
-                      </h3>
-                      <span className="rounded-full bg-[#aca377] px-3 py-0.5 text-[10px] font-bold tracking-wide text-black uppercase md:px-4 md:py-1 md:text-xs lg:px-5 lg:py-1.5 lg:text-sm 2xl:px-6 2xl:py-2 2xl:text-base">
-                        Paso 2
-                      </span>
-                    </div>
-                    <p className="text-sm text-gray-300 md:text-base lg:text-lg xl:text-lg 2xl:text-xl">
-                      Adquisición y Ventas
-                    </p>
-                  </div>
-
-                  {/* Paso 3 */}
-                  <div className="group relative rounded-2xl border border-[#aca377]/30 bg-gradient-to-br from-[#aca377]/10 to-black p-3.5 transition-all duration-300 hover:shadow-[0_0_30px_rgba(172,163,119,0.3)] md:p-4 lg:p-5 xl:p-6 2xl:p-7">
-                    <div className="mb-1 flex items-center justify-between gap-3 md:mb-1.5 md:gap-4">
-                      <h3 className="text-lg font-bold text-[#aca377] md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
-                        Escalar
-                      </h3>
-                      <span className="rounded-full bg-[#aca377] px-3 py-0.5 text-[10px] font-bold tracking-wide text-black uppercase md:px-4 md:py-1 md:text-xs lg:px-5 lg:py-1.5 lg:text-sm 2xl:px-6 2xl:py-2 2xl:text-base">
-                        Paso 3
-                      </span>
-                    </div>
-                    <p className="text-sm text-gray-300 md:text-base lg:text-lg xl:text-lg 2xl:text-xl">
-                      Con Procesos y Sistemas
-                    </p>
-                  </div>
-                </div>
-                <div className="mt-2.5 rounded-2xl border border-[#aca377]/25 bg-gradient-to-br from-zinc-900/80 via-black to-black p-2.5 shadow-[0_0_18px_rgba(172,163,119,0.1)] md:mt-3 md:p-3 lg:mt-4 lg:p-4 xl:mt-5 xl:p-5 2xl:mt-6 2xl:p-6">
-                  <div className="flex flex-wrap items-center justify-between gap-2 text-center md:gap-2.5 md:text-left">
-                    <div>
-                      <p className="text-[10px] font-semibold tracking-[0.45em] text-[#aca377]/70 uppercase md:text-xs 2xl:text-sm">
-                        Incluye
-                      </p>
-                    </div>
-                    <span className="rounded-full border border-[#aca377]/30 px-3 py-0.5 text-[10px] font-semibold text-[#aca377] md:px-4 md:py-1 md:text-[11px] lg:px-5 lg:py-1.5 lg:text-xs 2xl:px-6 2xl:py-2 2xl:text-sm">
-                      {basePlanFeatures.length} ACCESOS
-                    </span>
-                  </div>
-                  <div className="mt-2 grid gap-1.5 md:mt-2.5 md:grid-cols-2 md:gap-2 lg:mt-3 lg:gap-2.5 2xl:mt-4 2xl:gap-3">
-                    {basePlanFeatures.map((feature, i) => (
-                      <div
-                        key={feature.text}
-                        className="rounded-2xl border border-[#aca377]/25 bg-black/40 p-2 text-xs shadow-[0_4px_12px_rgba(0,0,0,0.28)] transition-all duration-300 hover:border-[#aca377]/60 md:p-2.5 md:text-sm lg:p-3 2xl:p-4 2xl:text-base"
-                      >
-                        <p className="flex items-center justify-between text-[10px] font-semibold tracking-[0.35em] text-[#aca377]/70 uppercase md:text-xs 2xl:text-sm">
-                          <span>{String(i + 1).padStart(2, "0")}</span>
-                        </p>
-                        <p className="mt-0.5 text-xs text-gray-100 md:text-sm lg:text-base 2xl:text-lg">
-                          {feature.text.includes(":") ? (
-                            <>
-                              <span className="font-bold">
-                                {feature.text.split(":")[0]}:
-                              </span>
-                              <span>
-                                {feature.text.split(":").slice(1).join(":")}
-                              </span>
-                            </>
-                          ) : (
-                            feature.text
-                          )}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                <p className="mx-auto max-w-6xl text-lg leading-relaxed text-gray-300 md:text-xl">
+                  Vas a sumar y sostener entre{" "}
+                  <span className="font-bold text-[#aca377]">USD 20.000 </span>{" "}
+                  y <span className="font-bold text-[#aca377]">USD 54.000</span>{" "}
+                  adicionales de facturación en tu{" "}
+                  <span className="font-bold text-[#aca377]">
+                    consultoría B2B,
+                  </span>{" "}
+                  llevando al máximo tu{" "}
+                  <span className="text-[#aca377]">Adquisición</span> y tus{" "}
+                  <span className="text-[#aca377]">Fundamentos</span> en un
+                  programa de trabajo 1-1 conmigo durante 4 meses.
+                </p>
               </div>
-            </RevealOnScroll>
+            </div>
+          </RevealOnScroll>
 
-            <RevealOnScroll direction="up" delay={0.8}>
-              <div className="flex h-full w-full flex-col">
-                <h3 className="mb-3 text-center text-4xl font-bold tracking-tight text-[#aca377] md:mb-4 md:text-5xl lg:mb-5 lg:text-6xl xl:mb-6 xl:text-6xl 2xl:mb-8 2xl:text-7xl">
-                  Qué incluye
-                </h3>
-                <div className="mx-auto flex h-full w-full flex-1 flex-col">
-                  <div className="relative flex h-full flex-1 flex-col rounded-2xl border-2 border-[#aca377]/70 bg-gradient-to-br from-[#aca377]/15 to-black p-3 shadow-[0_0_30px_rgba(172,163,119,0.25)] md:p-4 lg:p-5 xl:p-6 2xl:p-7">
-                    {/* Features List */}
-                    <div className="mb-2.5 flex flex-1 flex-col space-y-1.5 md:mb-3 md:space-y-2 lg:mb-4 lg:space-y-2.5 xl:mb-4 xl:space-y-3 2xl:mb-5 2xl:space-y-4">
-                      {/* Divider */}
-                      <div className="flex items-center gap-2 md:gap-2.5 lg:gap-3 2xl:gap-4">
-                        <div className="h-px flex-1 bg-[#aca377]/30"></div>
-                        <span className="text-[10px] font-semibold text-[#aca377] uppercase md:text-xs lg:text-sm 2xl:text-base">
-                          Entregables del programa
-                        </span>
-                        <div className="h-px flex-1 bg-[#aca377]/30"></div>
+          {/* === Objectives Grid === */}
+          <div className="grid gap-6 md:grid-cols-2 md:gap-8 lg:gap-10">
+            {objectives.map((obj, i) => (
+              <RevealOnScroll
+                key={i}
+                direction={i % 2 === 0 ? "left" : "right"}
+                delay={0.1 * (i + 1) + 0.3}
+              >
+                <div className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-zinc-800 bg-gradient-to-br from-zinc-900 via-black to-zinc-900 p-7 transition-all duration-500 hover:border-[#aca377] hover:shadow-[0_0_40px_rgba(172,163,119,0.2)] md:p-8 lg:p-9">
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#aca377]/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+
+                  <div className="relative z-10 flex h-full flex-col space-y-4 md:space-y-5">
+                    <div className="flex items-center gap-4">
+                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#aca377]/10 text-[#aca377] transition-all duration-500 group-hover:scale-110 group-hover:bg-[#aca377]/20 md:h-16 md:w-16 lg:h-20 lg:w-20">
+                        {obj.icon}
                       </div>
-
-                      {/* Special Features */}
-                      <div className="flex flex-1 flex-col space-y-1.5 md:space-y-2 lg:space-y-2.5 2xl:space-y-3">
-                        {specialPlanFeatures.map((feature) => (
-                          <div
-                            key={feature.text}
-                            className="rounded-2xl border border-[#aca377]/30 bg-black/40 px-2.5 py-1.5 text-center transition-all duration-300 hover:border-[#aca377]/70 hover:bg-[#aca377]/10 md:px-3 md:py-2 lg:px-4 lg:py-2.5 2xl:px-5 2xl:py-3"
-                          >
-                            <p className="mt-0.5 text-xs font-medium text-[#f4f0db] md:text-sm lg:text-base 2xl:text-lg">
-                              {feature.text}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* Bonus Features */}
-                      {bonusFeatures.length > 0 && (
-                        <div className="mt-3 space-y-2 md:mt-4 md:space-y-2.5 lg:mt-5 lg:space-y-3 2xl:mt-6 2xl:space-y-3.5">
-                          {bonusFeatures.map((bonus) => (
-                            <div
-                              key={bonus.text}
-                              className="group relative overflow-hidden rounded-2xl border-2 border-[#aca377] bg-gradient-to-br from-[#aca377]/20 via-[#aca377]/10 to-black px-3 py-2.5 text-center shadow-[0_0_20px_rgba(172,163,119,0.3)] transition-all duration-300 hover:border-[#e5dcb6] hover:shadow-[0_0_30px_rgba(172,163,119,0.5)] md:px-4 md:py-3 lg:px-5 lg:py-3.5 2xl:px-6 2xl:py-4"
-                            >
-                              <div className="absolute inset-0 bg-gradient-to-br from-[#aca377]/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                              <div className="relative flex items-center justify-center gap-2 md:gap-3">
-                                <div className="flex-shrink-0 rounded-full bg-gradient-to-br from-[#aca377] to-[#d4c994] px-2.5 py-1 shadow-lg md:px-3 md:py-1.5">
-                                  <span className="text-[10px] font-bold tracking-wide text-black uppercase md:text-xs">
-                                    Bonus N°{bonus.number}
-                                  </span>
-                                </div>
-                                <p className="text-xs font-semibold text-[#f4edd3] md:text-sm lg:text-base 2xl:text-lg">
-                                  {bonus.text}
-                                </p>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      )}
+                      <h3 className="text-xl font-bold text-white transition-colors duration-300 group-hover:text-[#aca377] md:text-2xl lg:text-3xl">
+                        {obj.title}
+                      </h3>
                     </div>
 
-                    {/* Duration */}
-                    <div className="my-1.5 border-t border-[#aca377]/30 pt-1.5 md:my-2 md:pt-2 lg:my-2.5 lg:pt-2.5 2xl:my-3 2xl:pt-3">
-                      <h4 className="text-center text-sm font-bold text-white md:text-base lg:text-lg 2xl:text-xl">
-                        4 Meses
-                      </h4>
-                    </div>
-
-                    {/* Pricing Options */}
-                    <div className="space-y-1 md:space-y-1.5 lg:space-y-2 2xl:space-y-2.5">
-                      {planPricing.map((price, j) => (
-                        <div
-                          key={j}
-                          className="rounded-lg border border-[#aca377]/40 bg-gradient-to-r from-[#d4c994] to-[#aca377] p-1.5 text-center text-xs shadow-lg transition-all duration-300 md:p-2 md:text-sm lg:p-2.5 lg:text-base 2xl:p-3 2xl:text-lg"
-                        >
-                          <p className="font-semibold text-black">{price}</p>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Disclaimer */}
-                    <p className="mt-1.5 text-center text-[10px] text-gray-400 md:mt-2 md:text-xs lg:mt-2.5 lg:text-sm 2xl:mt-3 2xl:text-base">
-                      Limitado a 3 cupos por mes.
+                    <p className="flex-1 text-base leading-relaxed text-gray-400 md:text-lg lg:text-xl">
+                      {obj.description}
                     </p>
+
+                    <div className="mt-auto h-0.5 w-0 rounded-full bg-gradient-to-r from-[#aca377] to-transparent transition-all duration-700 group-hover:w-full"></div>
                   </div>
                 </div>
-              </div>
-            </RevealOnScroll>
+              </RevealOnScroll>
+            ))}
           </div>
-        </div>
+        </section>
 
         {/* === Results Section === */}
         <RevealOnScroll direction="up" delay={1}>
           <div className="space-y-10 text-center">
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
+            <h2 className="text-4xl font-bold tracking-tight md:text-6xl">
               ¿Qué resultados voy a alcanzar?
             </h2>
             <div className="mx-auto grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:max-w-[85%]">
@@ -452,6 +224,461 @@ const AboutSection = () => {
         {/* === Schedule Call Button ===  */}
         <RevealOnScroll direction="up" delay={0.6}>
           <ScheduleCallButton href="https://cal.com/fran-di-giorno/auditoria-estrategica-obsidian-systems?overlayCalendar=true" />
+        </RevealOnScroll>
+
+        {/* === Story Section === */}
+        <section className="mx-auto my-16 space-y-8 xl:max-w-[85%]">
+          {/* Title */}
+          <RevealOnScroll direction="up" delay={0.2}>
+            <h2 className="text-center text-2xl font-bold tracking-tight text-white md:text-3xl lg:text-4xl">
+              Antes de enseñarte mi método,{" "}
+              <span className="text-[#aca377]">
+                déjame contarte por qué funciona.
+              </span>
+            </h2>
+          </RevealOnScroll>
+
+          {/* Story Block 1 */}
+          <div className="grid gap-6 md:grid-cols-[300px_1fr] md:items-start md:gap-8">
+            <RevealOnScroll direction="right" delay={0.3}>
+              <div className="relative mx-auto h-64 w-full max-w-xs overflow-hidden rounded-xl border border-[#aca377]/30 shadow-[0_0_20px_rgba(172,163,119,0.1)] md:h-72">
+                <img
+                  src={fran1}
+                  alt="Francisco Di Giorno"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </RevealOnScroll>
+            <RevealOnScroll direction="left" delay={0.4}>
+              <div className="space-y-3 text-sm text-gray-300 md:text-base">
+                <h3 className="text-xl font-bold text-white md:text-2xl">
+                  Francisco Di Giorno
+                </h3>
+                <p>
+                  Hace un año tenía lo que muchos llaman{" "}
+                  <span className="font-bold text-white">"éxito"</span>.
+                  Agencia, coaching, lanzamientos...
+                </p>
+                <p>
+                  <span className="text-[#aca377]">
+                    Y aun así trabajaba 12-14 hs al día, todos los días.
+                  </span>{" "}
+                  El negocio dependía exclusivamente de mí.
+                </p>
+                <p>
+                  Tenía poco margen, cero libertad y un pensamiento que me
+                  perseguía:{" "}
+                  <span className="text-white italic">
+                    "¿Vale trabajar todo el día para avanzar tan poco?"
+                  </span>
+                </p>
+                <p className="font-bold text-white">Justo ahí toqué fondo.</p>
+              </div>
+            </RevealOnScroll>
+          </div>
+
+          {/* Transition */}
+          <RevealOnScroll direction="up" delay={0.3}>
+            <div className="rounded-xl border border-red-900/30 bg-gradient-to-br from-red-950/20 to-black p-5 text-center md:p-6">
+              <p className="text-base font-medium text-gray-200 md:text-lg">
+                Fue el momento exacto en que me di cuenta:{" "}
+                <span className="mt-2 block font-bold text-red-400">
+                  No importaba cuánto trabajara... el negocio no escalaba.
+                </span>
+              </p>
+            </div>
+          </RevealOnScroll>
+
+          {/* Story Block 2 */}
+          <div className="grid gap-6 md:grid-cols-[1fr_300px] md:items-start md:gap-8">
+            <RevealOnScroll direction="right" delay={0.3}>
+              <div className="space-y-3 text-sm text-gray-300 md:text-base">
+                <p>
+                  En ese caos, conocí a un mentor del Reino Unido que me enseñó
+                  a crear
+                  <span className="text-[#aca377]">
+                    {" "}
+                    equipos, procesos, automatizaciones... todo.
+                  </span>
+                </p>
+                <p className="font-bold text-white">Y me voló la cabeza.</p>
+                <p>Me tardé meses en tener los mejores sistemas.</p>
+                <p>
+                  Pero me faltaba lo único que realmente hace que un negocio
+                  escale:{" "}
+                  <span className="font-bold text-white">
+                    Un motor de adquisición y una oferta fuerte.
+                  </span>
+                </p>
+                <p>
+                  Y en ese momento lo entendí:{" "}
+                  <span className="font-bold text-red-400">
+                    Los sistemas NO iban a salvar mi negocio.
+                  </span>
+                </p>
+              </div>
+            </RevealOnScroll>
+            <RevealOnScroll direction="left" delay={0.4}>
+              <div className="relative mx-auto h-64 w-full max-w-xs overflow-hidden rounded-xl border border-[#aca377]/30 shadow-[0_0_20px_rgba(172,163,119,0.1)] md:h-72">
+                <img
+                  src={fran2}
+                  alt="Francisco trabajando"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </RevealOnScroll>
+          </div>
+
+          {/* Realization Block */}
+          <RevealOnScroll direction="up" delay={0.3}>
+            <div className="space-y-5 rounded-2xl border border-[#aca377]/20 bg-gradient-to-b from-[#aca377]/5 to-transparent p-6 md:p-8">
+              <div className="space-y-3 text-center text-sm text-gray-300 md:text-base">
+                <p>
+                  Por mucho tiempo pensé que mi problema era el burnout...{" "}
+                  <span className="font-bold text-white">
+                    Pero no. Esos eran solo síntomas.
+                  </span>
+                </p>
+                <p className="mx-auto max-w-3xl">
+                  El verdadero problema fue haber creído que podía escalar
+                  arreglando la operación antes de arreglar mi adquisición y mis
+                  fundamentos.
+                </p>
+              </div>
+
+              <div className="mx-auto max-w-2xl rounded-xl border border-white/10 bg-white/5 p-4 md:p-5">
+                <p className="mb-2 text-sm font-bold text-white md:text-base">
+                  Ese mismo error frena hoy a casi todos los consultores B2B:
+                </p>
+                <ul className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-left text-xs text-gray-300 md:text-sm">
+                  {[
+                    "Más SOPs",
+                    "Un COO",
+                    "Automatizar todo",
+                    "Más complejidad",
+                    "Construir antes de lanzar",
+                    "Backend gigante",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <span className="text-red-400">✕</span> {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="text-center">
+                <h3 className="text-lg font-bold text-white md:text-xl">
+                  Pero la verdad es simple:{" "}
+                  <span className="text-[#aca377]">
+                    Si tu oferta y tu adquisición están rotas, tu negocio entero
+                    está roto.
+                  </span>
+                </h3>
+              </div>
+
+              <div className="space-y-3 text-sm text-gray-300 md:text-base">
+                <p>
+                  Tuve que vivir esto para abrir los ojos. Yo nunca había sido
+                  el problema.{" "}
+                  <span className="font-bold text-white">
+                    Sino el intentar escalar sobre fundamentos débiles.
+                  </span>
+                </p>
+                <p>
+                  No necesitaba más sistemas ni automatizaciones complejas.
+                  Necesitaba:
+                </p>
+                <ul className="mx-auto grid max-w-md grid-cols-1 gap-1.5 text-left font-medium text-white md:grid-cols-3">
+                  <li className="flex items-center gap-2">
+                    <Check className="h-4 w-4 shrink-0 text-[#aca377]" />{" "}
+                    <span className="text-xs md:text-sm">
+                      Simplificar fundamentos
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check className="h-4 w-4 shrink-0 text-[#aca377]" />{" "}
+                    <span className="text-xs md:text-sm">
+                      Sistematizar adquisición
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check className="h-4 w-4 shrink-0 text-[#aca377]" />{" "}
+                    <span className="text-xs md:text-sm">
+                      Escalar con procesos simples
+                    </span>
+                  </li>
+                </ul>
+                <p className="text-center text-lg font-bold text-[#aca377] md:text-xl">
+                  Ese fue el clic que cambió mi negocio para siempre.
+                </p>
+              </div>
+            </div>
+          </RevealOnScroll>
+
+          {/* Final Conclusion */}
+          <RevealOnScroll direction="up" delay={0.4}>
+            <div className="grid gap-5 rounded-2xl border border-[#aca377]/30 bg-gradient-to-br from-[#aca377]/10 to-black p-6 md:grid-cols-2 md:items-center md:p-8">
+              <div className="space-y-3">
+                <h3 className="text-lg font-bold text-white md:text-xl">
+                  A partir de eso desarrollé el modelo que uso hoy:
+                </h3>
+                <p className="text-sm text-gray-300 md:text-base">
+                  Escalar maximizando lo único que realmente mueve la aguja:{" "}
+                  <span className="text-lg font-bold text-[#aca377]">
+                    Adquisición + Fundamentos.
+                  </span>
+                </p>
+                <div className="space-y-1.5">
+                  <p className="text-sm font-medium text-white">
+                    Y cuando hacés eso, todo se vuelve más simple:
+                  </p>
+                  <ul className="space-y-1 text-xs text-gray-300 md:text-sm">
+                    {[
+                      "Equipos simples",
+                      "Audiencias que convierten",
+                      "Márgenes altísimos",
+                      "Cero cuellos de botella",
+                      "Crecimiento predecible",
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-center gap-2">
+                        <Check className="h-3 w-3 text-[#aca377]" /> {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="flex flex-col items-center justify-center rounded-xl border border-[#aca377]/20 bg-black/40 p-5 text-center">
+                <p className="text-sm text-gray-400">No cambió mi deseo.</p>
+                <p className="mt-1 text-xl font-bold tracking-widest text-white uppercase md:text-2xl">
+                  Cambió el <span className="text-[#aca377]">vehículo</span>.
+                </p>
+              </div>
+            </div>
+          </RevealOnScroll>
+        </section>
+
+        {/* === SSE Method Section === */}
+        <RevealOnScroll direction="up" delay={0.3}>
+          <div className="mx-auto mt-26 max-w-4xl space-y-6">
+            {/* Title */}
+            <h2 className="text-center text-2xl font-bold text-white md:text-5xl">
+              El Método SSE:
+              <br />
+              <span className="text-[#aca377]">
+                Simplificar → Sistematizar → Escalar
+              </span>
+            </h2>
+
+            {/* Steps */}
+            <div className="space-y-4">
+              {/* Paso 1 */}
+              <div className="group relative overflow-hidden rounded-xl border border-[#aca377]/30 bg-gradient-to-br from-[#aca377]/5 to-black p-5 transition-all duration-300 hover:border-[#aca377]/60">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex-1">
+                    <h3 className="mb-2 text-lg font-bold text-[#aca377] md:text-3xl">
+                      Simplificar (Fundamentos y Entrega)
+                    </h3>
+                    <p className="text-sm leading-relaxed text-gray-300 md:text-lg">
+                      Optimizamos la oferta, el posicionamiento y la entrega
+                      para que los fundamentos del negocio sean simples, claros
+                      y rentables.
+                    </p>
+                  </div>
+                  <span className="shrink-0 rounded-full bg-[#aca377] px-3 py-1 text-xs font-bold text-black">
+                    PASO 1
+                  </span>
+                </div>
+              </div>
+
+              {/* Paso 2 */}
+              <div className="group relative overflow-hidden rounded-xl border border-[#aca377]/30 bg-gradient-to-br from-[#aca377]/5 to-black p-5 transition-all duration-300 hover:border-[#aca377]/60">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex-1">
+                    <h3 className="mb-2 text-lg font-bold text-[#aca377] md:text-3xl">
+                      Sistematizar (Adquisición & Ventas)
+                    </h3>
+                    <p className="text-sm leading-relaxed text-gray-300 md:text-lg">
+                      Creamos un sistema de adquisición y ventas adaptado al
+                      negocio, con pasos claros para generar y cerrar
+                      oportunidades todos los meses.
+                    </p>
+                  </div>
+                  <span className="shrink-0 rounded-full bg-[#aca377] px-3 py-1 text-xs font-bold text-black">
+                    PASO 2
+                  </span>
+                </div>
+              </div>
+
+              {/* Paso 3 */}
+              <div className="group relative overflow-hidden rounded-xl border border-[#aca377]/30 bg-gradient-to-br from-[#aca377]/5 to-black p-5 transition-all duration-300 hover:border-[#aca377]/60">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex-1">
+                    <h3 className="mb-2 text-lg font-bold text-[#aca377] md:text-3xl">
+                      Escalar (Con Procesos y Sistemas)
+                    </h3>
+                    <p className="text-sm leading-relaxed text-gray-300 md:text-lg">
+                      Documentamos procesos, delegamos tareas y montamos
+                      sistemas para aumentar facturación sin depender de más
+                      horas tuyas.
+                    </p>
+                  </div>
+                  <span className="shrink-0 rounded-full bg-[#aca377] px-3 py-1 text-xs font-bold text-black">
+                    PASO 3
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Footer Text */}
+            <div className="space-y-2 pt-4 text-center">
+              <p className="text-sm text-gray-400 md:text-base">
+                Escalar no es hacer más.
+              </p>
+              <p className="text-base font-medium text-white md:text-lg">
+                Es hacer lo <span className="text-[#aca377]">correcto</span> en
+                el orden <span className="text-[#aca377]">correcto</span>.
+              </p>
+            </div>
+          </div>
+        </RevealOnScroll>
+
+        {/* === This is for you if Section === */}
+        <RevealOnScroll direction="up" delay={0.3}>
+          <div className="mx-auto my-20 max-w-[1300px]">
+            <div className="grid gap-6 md:grid-cols-2 md:gap-8">
+              {/* Green Card - This IS for you */}
+              <div className="group relative overflow-hidden rounded-3xl border border-[#34d399]/20 bg-gradient-to-br from-[#34d399]/10 to-transparent p-8 backdrop-blur-sm transition-all duration-500 hover:border-[#34d399]/40">
+                {/* Decorative Elements */}
+                <div className="pointer-events-none absolute top-0 right-0 h-32 w-32 rounded-full bg-[#34d399]/10 blur-2xl transition-all duration-500 group-hover:bg-[#34d399]/20"></div>
+                <div className="pointer-events-none absolute bottom-0 left-0 h-24 w-24 rounded-full bg-[#34d399]/5 blur-xl"></div>
+                <div className="absolute top-4 right-4 h-2 w-2 animate-pulse rounded-full bg-[#34d399]"></div>
+                <div className="animation-delay-500 absolute right-8 bottom-8 h-1 w-1 animate-pulse rounded-full bg-[#34d399]/50"></div>
+                <div className="absolute top-0 left-1/2 h-px w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#34d399]/50 to-transparent"></div>
+
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className="mb-8 flex items-center gap-3">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#34d399]/30 bg-[#34d399]/20 shadow-lg shadow-[#34d399]/20">
+                      <Check className="h-7 w-7 text-[#34d399]" />
+                    </div>
+                    <div>
+                      <h3 className="text-3xl font-bold text-[#34d399] md:text-4xl">
+                        Esto solo funcionará si:
+                      </h3>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-4">
+                    {[
+                      "Eres consultor B2B haciendo entre $10K y $15K/mes",
+                      "Tienes clientes, y das resultados, pero se siente desorganizado",
+                      "Sentis que estás a un 10% de romperla",
+                      "Queres simplicidad y foco, no complejidad",
+                      "Queres volver tu negocio un sistema que crece contigo",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="group/item flex items-start gap-3 rounded-lg p-2 transition-colors hover:bg-[#34d399]/5"
+                      >
+                        <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#34d399]/20 transition-colors group-hover/item:bg-[#34d399]/30">
+                          <Check className="h-4 w-4 text-[#34d399] transition-transform group-hover/item:scale-110" />
+                        </div>
+                        <span className="text-base text-gray-300 transition-colors group-hover/item:text-white md:text-lg">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Red Card - This is NOT for you */}
+              <div className="group relative overflow-hidden rounded-3xl border border-red-500/20 bg-gradient-to-br from-red-500/10 to-transparent p-8 backdrop-blur-sm transition-all duration-500 hover:border-red-500/40">
+                {/* Decorative Elements */}
+                <div className="pointer-events-none absolute top-0 left-0 h-32 w-32 rounded-full bg-red-500/10 blur-2xl transition-all duration-500 group-hover:bg-red-500/20"></div>
+                <div className="pointer-events-none absolute right-0 bottom-0 h-24 w-24 rounded-full bg-red-400/5 blur-xl"></div>
+                <div className="absolute top-4 left-4 h-2 w-2 animate-pulse rounded-full bg-red-400"></div>
+                <div className="animation-delay-700 absolute bottom-8 left-8 h-1 w-1 animate-pulse rounded-full bg-red-400/50"></div>
+                <div className="absolute top-0 left-1/2 h-px w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-red-500/50 to-transparent"></div>
+
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className="mb-8 flex items-center gap-3">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-red-500/30 bg-red-500/20 shadow-lg shadow-red-500/20">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="h-7 w-7 text-red-400"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="m15 9-6 6"></path>
+                        <path d="m9 9 6 6"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-3xl font-bold text-red-400 md:text-4xl">
+                        Esto NO te va a funcionar si:
+                      </h3>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-4">
+                    {[
+                      "Solo buscas 'hacer plata rápido'",
+                      "No te importan tus clientes",
+                      "No tenés valores",
+                      "Buscas un coach motivacional",
+                      "Queres copiar estrategias sin pensar",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="group/item flex items-start gap-3 rounded-lg p-2 transition-colors hover:bg-red-500/5"
+                      >
+                        <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-500/20 transition-colors group-hover/item:bg-red-500/30">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="h-4 w-4 text-red-400 transition-transform group-hover/item:scale-110"
+                          >
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="m15 9-6 6"></path>
+                            <path d="m9 9 6 6"></path>
+                          </svg>
+                        </div>
+                        <span className="text-base text-gray-300 transition-colors group-hover/item:text-white md:text-lg">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Footer Message */}
+            <div className="mt-8 text-center">
+              <p className="text-base text-gray-400 md:text-lg">
+                Si te identificas con la columna verde,{" "}
+                <span className="font-semibold text-[#34d399]">
+                  sigue leyendo.
+                </span>
+              </p>
+            </div>
+          </div>
         </RevealOnScroll>
 
         {/* === Video Section ===  */}
