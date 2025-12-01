@@ -114,7 +114,7 @@ const Hero = () => {
       </div>
 
       {/* === Rest of Content without Background === */}
-      <div className="flex flex-col gap-9">
+      <div className="mx-auto flex max-w-[1300px] flex-col gap-9">
         {/* === Schedule Call Button === */}
         <RevealOnScroll direction="up" delay={0.6}>
           <ScheduleCallButton href="https://cal.com/fran-di-giorno/auditoria-estrategica-obsidian-systems?overlayCalendar=true" />
@@ -122,7 +122,7 @@ const Hero = () => {
 
         {/* === What It Is and What It Isn't === */}
         <RevealOnScroll direction="up" delay={0.7}>
-          <div className="mx-auto grid grid-cols-1 gap-6 lg:grid-cols-2 xl:max-w-[70%]">
+          <div className="mx-auto grid grid-cols-1 gap-6 lg:grid-cols-2">
             {/* Not What It Is */}
             <div className="group relative overflow-hidden rounded-2xl border border-red-900/30 bg-gradient-to-br from-red-950/30 to-black p-8 shadow-[0_0_30px_rgba(239,68,68,0.12)] transition-all duration-300 hover:-translate-y-1 hover:border-red-400/60 hover:shadow-[0_12px_40px_rgba(239,68,68,0.25)]">
               <div
@@ -183,7 +183,7 @@ const Hero = () => {
         {/* === Results Gallery === */}
         <RevealOnScroll direction="up" delay={0.8}>
           <div>
-            <div className="mx-auto grid max-w-6xl grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+            <div className="mx-auto grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
               {resultImages.map(({ src, type }, i) => (
                 <div key={i} className="relative overflow-hidden">
                   {type === "video" ? (
