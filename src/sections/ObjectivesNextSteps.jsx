@@ -1,6 +1,7 @@
-
 import ScheduleCallButton from "../common/ScheduleCallButton";
 import RevealOnScroll from "../common/RevealOnScroll";
+
+import { Crown, Smile, Trophy, Shell, Check } from "lucide-react";
 
 const ObjectivesNextSteps = () => {
   const steps = [
@@ -29,7 +30,143 @@ const ObjectivesNextSteps = () => {
 
   return (
     <div className="px-4 py-24 text-white">
-      <div className="mx-auto max-w-[95%] space-y-32 xl:max-w-[90%] 2xl:max-w-[85%]">
+      <div className="mx-auto max-w-[95%] space-y-32 2xl:max-w-[60%]">
+        {/* === This is for you if Section === */}
+        <RevealOnScroll direction="up" delay={0.3}>
+          <div className="mx-auto my-20">
+            <div className="grid gap-6 md:grid-cols-2 md:gap-8">
+              {/* Green Card - This IS for you */}
+              <div className="group relative overflow-hidden rounded-3xl border border-[#34d399]/20 bg-gradient-to-br from-[#34d399]/10 to-transparent p-8 backdrop-blur-sm transition-all duration-500 hover:border-[#34d399]/40">
+                {/* Decorative Elements */}
+                <div className="pointer-events-none absolute top-0 right-0 h-32 w-32 rounded-full bg-[#34d399]/10 blur-2xl transition-all duration-500 group-hover:bg-[#34d399]/20"></div>
+                <div className="pointer-events-none absolute bottom-0 left-0 h-24 w-24 rounded-full bg-[#34d399]/5 blur-xl"></div>
+
+                <div className="absolute top-0 left-1/2 h-px w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#34d399]/50 to-transparent"></div>
+
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className="mb-8 flex items-center gap-3">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#34d399]/30 bg-[#34d399]/20 shadow-lg shadow-[#34d399]/20">
+                      <Check className="h-7 w-7 text-[#34d399]" />
+                    </div>
+                    <div>
+                      <h3 className="text-3xl font-bold text-[#34d399] md:text-4xl">
+                        Esto solo funcionará si:
+                      </h3>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-4">
+                    {[
+                      "Eres consultor B2B haciendo entre $10K y $15K/mes.",
+                      "Tienes clientes, y das resultados, pero tu entrega de servicio se siente desorganizada por dentro.",
+                      "Estás dispuesto a ejecutar rápido, iterar con cabeza y sostener estándares altos.",
+                      "Buscas simplicidad, foco y estructuras que realmente muevan la aguja.",
+                      "Valorás más la reputación y los resultados de tus clientes por encima de todo.",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="group/item flex items-start gap-3 rounded-lg p-2 transition-colors hover:bg-[#34d399]/5"
+                      >
+                        <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#34d399]/20 transition-colors group-hover/item:bg-[#34d399]/30">
+                          <Check className="h-4 w-4 text-[#34d399] transition-transform group-hover/item:scale-110" />
+                        </div>
+                        <span className="text-base text-gray-300 transition-colors group-hover/item:text-white md:text-lg">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Red Card - This is NOT for you */}
+              <div className="group relative overflow-hidden rounded-3xl border border-red-500/20 bg-gradient-to-br from-red-500/10 to-transparent p-8 backdrop-blur-sm transition-all duration-500 hover:border-red-500/40">
+                {/* Decorative Elements */}
+                <div className="pointer-events-none absolute top-0 left-0 h-32 w-32 rounded-full bg-red-500/10 blur-2xl transition-all duration-500 group-hover:bg-red-500/20"></div>
+                <div className="pointer-events-none absolute right-0 bottom-0 h-24 w-24 rounded-full bg-red-400/5 blur-xl"></div>
+                <div className="absolute top-0 left-1/2 h-px w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-red-500/50 to-transparent"></div>
+
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className="mb-8 flex items-center gap-3">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-red-500/30 bg-red-500/20 shadow-lg shadow-red-500/20">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="h-7 w-7 text-red-400"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="m15 9-6 6"></path>
+                        <path d="m9 9 6 6"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-3xl font-bold text-red-400 md:text-4xl">
+                        Esto NO te va a funcionar si:
+                      </h3>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-4">
+                    {[
+                      "Solo querés “hacer plata rápido” sin trabajar en serio.",
+                      "Buscás fórmulas mágicas, funnels copiados y blueprints genéricos.",
+                      "Cambiás de estrategia cada dos semanas y nunca ejecutás en profundidad.",
+                      "Te atraen el FOMO, el hype y las tácticas turbias para venderle a cualquiera.",
+                      "Te molesta la meritocracia y preferís culpar al contexto antes que asumir responsabilidad.",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="group/item flex items-start gap-3 rounded-lg p-2 transition-colors hover:bg-red-500/5"
+                      >
+                        <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-500/20 transition-colors group-hover/item:bg-red-500/30">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="h-4 w-4 text-red-400 transition-transform group-hover/item:scale-110"
+                          >
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="m15 9-6 6"></path>
+                            <path d="m9 9 6 6"></path>
+                          </svg>
+                        </div>
+                        <span className="text-base text-gray-300 transition-colors group-hover/item:text-white md:text-lg">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Footer Message */}
+            <div className="mt-8 text-center">
+              <p className="text-base text-gray-400 md:text-lg">
+                Si te identificas con la columna verde,{" "}
+                <span className="font-semibold text-[#34d399]">
+                  sigue leyendo.
+                </span>
+              </p>
+            </div>
+          </div>
+        </RevealOnScroll>
+
         {/* === Next Steps Section === */}
         <section className="space-y-10 pt-28">
           {/* === Section Header + Steps Timeline Unified Reveal === */}

@@ -66,7 +66,7 @@ const ClientsSection = () => {
 
       {/* === Investment Plans Section === */}
       <RevealOnScroll direction="up" delay={0.5}>
-        <div className="mx-auto mt-32 max-w-3xl">
+        <div className="mx-auto mt-32 max-w-4xl">
           {/* Title */}
           <h2 className="mb-4 text-center text-4xl font-bold text-white md:text-5xl">
             Qué Incluye
@@ -115,7 +115,6 @@ const ClientsSection = () => {
                     num: "05",
                     title: "Duración:",
                     desc: "120 días de consultoría donde trabajo directamente sobre tu negocio. No hay asistentes, no hay coaches. Solo tú y yo.",
-                    highlight: true,
                   },
                   {
                     num: "06",
@@ -174,26 +173,7 @@ const ClientsSection = () => {
               </div>
             </div>
 
-            {/* Duration */}
-            <div className="my-6 pt-2">
-              <h4 className="text-center text-xl font-bold text-white md:text-2xl">
-                4 Meses
-              </h4>
-            </div>
 
-            {/* Pricing Options */}
-            <div className="space-y-3">
-              <div className="rounded-xl border border-[#34d399] bg-[#34d399]/10 p-4 text-center transition-all duration-300 hover:shadow-[0_0_20px_rgba(52,211,153,0.3)]">
-                <p className="text-base font-bold tracking-wide text-[#82ffd1] md:text-lg">
-                  PAGO ÚNICO DE $3500 USD
-                </p>
-              </div>
-              <div className="rounded-xl border border-[#34d399] bg-[#34d399]/10 p-4 text-center transition-all duration-300 hover:shadow-[0_0_20px_rgba(52,211,153,0.3)]">
-                <p className="text-base font-bold tracking-wide text-[#82ffd1] md:text-lg">
-                  2 PAGOS DE $2100 USD
-                </p>
-              </div>
-            </div>
 
             {/* Disclaimer */}
             <p className="mt-6 text-center text-sm text-gray-400 md:text-base">

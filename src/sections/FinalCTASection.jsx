@@ -9,14 +9,14 @@ import { photos, hero, largerPhotos } from "../data/finalCTAImages";
 const FinalCTASection = () => {
   return (
     <section className="px-4 pt-16 text-white">
-      <div className="mx-auto max-w-7xl space-y-16">
+      <div className="space-y-16">
         {/* === FOMO Message === */}
         <RevealOnScroll direction="up" delay={0.2}>
           <div className="mx-auto text-center">
             <div>
-              <div className="flex items-start justify-center gap-4">
+              <div className="mx-auto flex items-start justify-center gap-4 md:max-w-[60%]">
                 <AlertCircle className="mt-2 h-8 w-8 flex-shrink-0 text-[#aca377]" />
-                <h2 className="text-left text-lg font-bold leading-relaxed font-medium lg:text-2xl">
+                <h2 className="text-left text-lg leading-relaxed font-bold font-medium lg:text-2xl">
                   <span className="text-[#aca377]">PD: </span>
                   <span>
                     Esto NO es FOMO: literalmente solo trabajo con 3 clientes
@@ -39,7 +39,7 @@ const FinalCTASection = () => {
 
         {/* === Social Proof Gallery === */}
         <RevealOnScroll direction="up" delay={0.4}>
-          <div className="mx-auto max-w-6xl">
+          <div className="mx-auto md:max-w-[60%]">
             <style>{`
             .react-photo-album img {
               transition: transform 0.3s ease;
