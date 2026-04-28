@@ -1,8 +1,16 @@
 import RevealOnScroll from "../../common/RevealOnScroll";
+import { ANIMATION_DELAYS } from "../../constants/animations";
 
+/**
+ * Pain Points Grid component
+ * Displays a grid of customer pain points with hover effects
+ * @param {Object} props - Component properties
+ * @param {Array<{title: string, description: string}>} props.painPoints - Array of pain point objects
+ * @returns {JSX.Element} Rendered pain points grid
+ */
 const PainPointsGrid = ({ painPoints }) => {
   return (
-    <RevealOnScroll direction="up" delay={0.6}>
+    <RevealOnScroll direction="up" delay={ANIMATION_DELAYS.ABOUT_PAIN_POINTS}>
       <div className="mx-auto mt-10 grid gap-5 md:grid-cols-2">
         {painPoints.map((point) => (
           <div

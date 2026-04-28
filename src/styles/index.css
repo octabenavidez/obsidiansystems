@@ -12,6 +12,24 @@
   font-named-instance: "Regular";
 }
 
+/* === FONT: Benedict (para textos decorativos manuscritos) === */
+@font-face {
+  font-family: "Benedict";
+  src: url("/src/assets/fonts/Benedict Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* === FONT: Apple Garamond (para subtítulos elegantes) === */
+@font-face {
+  font-family: "Apple Garamond";
+  src: url("/src/assets/fonts/AppleGaramond.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* === GLOBAL BODY FONT === */
 html,
 body {
@@ -23,6 +41,24 @@ body {
 body {
   font-family: "Inter", sans-serif;
   background-color: #0a0a0a;
+}
+
+/*
+ * Fixed background texture via pseudo-element.
+ * iOS Safari ignores background-attachment: fixed on body,
+ * causing visible banding between sections. This approach
+ * uses a position: fixed layer that iOS fully supports.
+ */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: #0a0a0a;
+  background-image: url("/src/assets/images/background/background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* === PREVENT IFRAME OVERFLOW === */
@@ -38,3 +74,84 @@ img {
   -moz-user-select: none;
   -ms-user-select: none;
 }
+
+/* === TAILWIND CSS v4 THEME & UTILITIES === */
+
+@theme {
+  /* Design Tokens: Gradients */
+  --color-silver-gradient: linear-gradient(
+    135deg,
+    #ffffff,
+    #686868,
+    #ffffff,
+    #747474,
+    #ffffff
+  );
+  --color-gold-gradient: linear-gradient(
+    135deg,
+    #c5ad7e,
+    #605a44,
+    #c5ad7e,
+    #605a44,
+    #c5ad7e
+  );
+  --color-light-silver: linear-gradient(
+    135deg,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #c7c7c7,
+    #ffffff,
+    #ffffff
+  );
+
+  /* Layout Tokens */
+  --bg-card-dark: linear-gradient(90deg, #0b0b0b, #1c1c1c, #0b0b0b);
+
+  /* Font Family Tokens */
+  --font-apple-garamond: "Apple Garamond", serif;
+}
+
+/* 
+ * Custom Utilities for Model Section 
+ */
+
+@utility text-gradient-silver {
+  background: var(--color-silver-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+@utility text-gradient-gold {
+  background: var(--color-gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+@utility text-gradient-light {
+  background: var(--color-light-silver);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility bg-card-gradient {
+  background: var(--bg-card-dark);
+}
+
+@utility border-silver-gradient {
+  background: var(--color-silver-gradient);
+}
+
+@utility border-gold-gradient {
+  background: var(--color-gold-gradient);
+}
+
+@utility bg-silver-elegant {
+  background-color: #d1d5db;
+}
+

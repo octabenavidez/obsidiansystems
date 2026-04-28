@@ -11,6 +11,7 @@ import CallModal from "./CallModal";
  * Props:
  * @param {string} [calendarLink] - Google Calendar link for scheduling
  * @param {string} [profileImage] - Profile image URL
+ * @param {string} [profileImageAlt] - Profile image alt text
  * @param {string} [name] - Person's name
  * @param {string} [role] - Person's role/title
  * @param {string} [description] - Modal description text
@@ -18,10 +19,11 @@ import CallModal from "./CallModal";
  */
 
 const FloatingCallButton = ({
-  calendarLink = "https://cal.com/fran-di-giorno/auditoria-estrategica-obsidian-systems",
-  profileImage = "/src/assets/images/fran.jpeg",
+  calendarLink = "https://cal.com/fran-di-giorno/admision-obsidian-systems",
+  profileImage = "/src/assets/images/founder/founder-avatar-floating.jpg",
+  profileImageAlt = "Fotografía de Fran Di Giorno en el botón flotante de agendamiento de llamadas",
   name = "Fran Di Giorno",
-  role = "CEO Obsidian Systems",
+  role = "CEO Consulting OS™",
   description = "Esta llamada será conmigo. No es una “auditoría”; es una evaluación para revisar lo que has construido y confirmar si cumples las condiciones para que trabajemos juntos.",
   availabilityText = "Solo estoy tomando pocas llamadas por día.",
 }) => {
@@ -60,10 +62,10 @@ const FloatingCallButton = ({
           setIsModalOpen(true);
           setIsPressed(false); // Remove pressed effect on manual click
         }}
-        className={`fixed right-6 bottom-6 z-40 flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-gradient-to-br from-[#aca377] to-[#d4c994] transition-all duration-300 focus:ring-2 focus:ring-[#aca377]/50 focus:ring-offset-2 focus:ring-offset-black focus:outline-none md:right-8 md:bottom-8 md:h-20 md:w-20 ${
+        className={`fixed right-6 bottom-6 z-40 flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-silver-elegant transition-all duration-300 focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-black focus:outline-none md:right-8 md:bottom-8 md:h-20 md:w-20 ${
           isPressed
-            ? "scale-90 shadow-[0_2px_10px_rgba(172,163,119,0.3)]"
-            : "scale-100 shadow-[0_4px_20px_rgba(172,163,119,0.4)] hover:scale-110 hover:shadow-[0_6px_30px_rgba(172,163,119,0.6)]"
+            ? "scale-90 shadow-[0_2px_10px_rgba(104,104,104,0.3)]"
+            : "scale-100 shadow-[0_4px_20px_rgba(104,104,104,0.4)] hover:scale-110 hover:shadow-[0_10px_40px_rgba(255,255,255,0.2)]"
         }`}
         aria-label="Open call scheduling modal"
       >
@@ -80,6 +82,7 @@ const FloatingCallButton = ({
         onClose={() => setIsModalOpen(false)}
         calendarLink={calendarLink}
         profileImage={profileImage}
+        profileImageAlt={profileImageAlt}
         name={name}
         role={role}
         description={description}

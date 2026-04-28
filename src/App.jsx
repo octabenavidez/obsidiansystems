@@ -1,31 +1,44 @@
-import Layout from "./layout/Layout";
-import AboutSection from "./sections/AboutSection";
-import ClientsSection from "./sections/ClientsSection";
-import FinalCTASection from "./sections/FinalCTASection";
-import Hero from "./sections/Hero";
-import ObjectivesNextSteps from "./sections/ObjectivesNextSteps";
-import TestimonialsSection from "./sections/TestimonialSection";
+import { Route, Switch, useLocation } from "wouter";
+import HomePage from "./pages/HomePage";
+import ThankYouPage from "./pages/ThankYouPage";
 import FloatingCallButton from "./common/FloatingCallButton";
 
+/**
+ * Main application component that handles routing using Wouter.
+ * Wraps all routes with the FloatingCallButton for consistent UX.
+ * @returns {JSX.Element} The rendered application
+ */
 function App() {
+  const [location] = useLocation();
+
+  // Hide FloatingCallButton on the thank you page
+  const showFloatingButton = location !== "/thank-you-page";
+
   return (
     <>
-      <Layout>
-        <Hero />
-        <AboutSection /> 
-        <ClientsSection />
-        <ObjectivesNextSteps />
-        <TestimonialsSection />
-        <FinalCTASection />
-      </Layout>
-      {/* Floating Call Button - Visible on all pages */}
-      <FloatingCallButton
-        calendarLink="https://cal.com/fran-di-giorno/auditoria-estrategica-obsidian-systems"
-        name="Fran Di Giorno"
-        role="CEO Obsidian Systems"
-        description="Esta llamada será conmigo. No es una “auditoría”; es para revisar lo que has construido y confirmar si cumples las condiciones para que trabajemos juntos."
-        availabilityText="Solo estoy tomando pocas llamadas por día."
-      />
+      <Switch>
+        {/* Home page route */}
+        <Route path="/" component={HomePage} />
+
+        {/* Thank you page route */}
+        <Route path="/thank-you-page" component={ThankYouPage} />
+
+        {/* 404 fallback - redirects to home */}
+        <Route>
+          <HomePage />
+        </Route>
+      </Switch>
+
+      {/* Floating Call Button - Hidden on thank you page */}
+      {showFloatingButton && (
+        <FloatingCallButton
+          calendarLink="https://cal.com/fran-di-giorno/admision-obsidian-systems"
+          name="Fran Di Giorno"
+          role="CEO Consulting OS™"
+          description='Esta llamada será conmigo. No es una "auditoría"; es para revisar lo que has construido y confirmar si cumples las condiciones para que trabajemos juntos.'
+          availabilityText="Solo estoy tomando pocas llamadas por día."
+        />
+      )}
     </>
   );
 }

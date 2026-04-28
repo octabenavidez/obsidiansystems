@@ -11,6 +11,7 @@ import { X } from "lucide-react";
  * @param {function} onClose - Function to close the modal
  * @param {string} [calendarLink] - Google Calendar link for scheduling
  * @param {string} [profileImage] - Profile image URL
+ * @param {string} [profileImageAlt] - Profile image alt text
  * @param {string} [name] - Person's name
  * @param {string} [role] - Person's role/title
  * @param {string} [description] - Modal description text
@@ -20,10 +21,11 @@ import { X } from "lucide-react";
 const CallModal = ({
   isOpen,
   onClose,
-  calendarLink = "https://cal.com/fran-di-giorno/auditoria-estrategica-obsidian-systems",
-  profileImage = "/src/assets/images/fran.jpeg",
+  calendarLink = "https://cal.com/fran-di-giorno/admision-obsidian-systems",
+  profileImage = "/src/assets/images/founder/founder-avatar-floating.jpg",
+  profileImageAlt = "Fotografía de Fran Di Giorno, CEO de Consulting OS™, disponible para agendar llamada de admisión",
   name = "Fran Di Giorno",
-  role = "CEO Obsidian Systems",
+  role = "CEO Consulting OS™",
   description = "Esta llamada será conmigo. No es una “auditoría”; es una evaluación para revisar lo que has construido y confirmar si cumples las condiciones para que trabajemos juntos.",
   availabilityText = "Solo estoy tomando pocas llamadas por día.",
 }) => {
@@ -66,13 +68,13 @@ const CallModal = ({
 
       {/* Modal Content - Positioned at bottom right corner */}
       <div
-        className="fixed right-4 bottom-24 z-50 w-[calc(100vw-2rem)] max-w-xs rounded-2xl border border-[#aca377]/30 bg-gradient-to-br from-[#0f0f0f] via-[#0a0a0a] to-black p-5 shadow-[0_0_50px_rgba(172,163,119,0.3)] transition-all duration-300 md:right-8 md:bottom-32 md:w-full md:max-w-sm md:p-6"
+        className="fixed right-4 bottom-24 z-50 w-[calc(100vw-2rem)] max-w-xs rounded-2xl border border-white/20 bg-gradient-to-br from-[#0f0f0f] via-[#0a0a0a] to-black p-5 shadow-[0_0_50px_rgba(255,255,255,0.1)] transition-all duration-300 md:right-8 md:bottom-32 md:w-full md:max-w-sm md:p-6"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 cursor-pointer rounded-full p-1.5 text-gray-400 transition-all duration-200 hover:bg-[#aca377]/10 hover:text-[#aca377] focus:ring-2 focus:ring-[#aca377]/50 focus:outline-none"
+          className="absolute top-3 right-3 cursor-pointer rounded-full p-1.5 text-gray-400 transition-all duration-200 hover:bg-white/10 hover:text-white focus:ring-2 focus:ring-white/50 focus:outline-none"
           aria-label="Close modal"
         >
           <X className="h-4 w-4" />
@@ -83,20 +85,20 @@ const CallModal = ({
           <div className="relative flex-shrink-0">
             <img
               src={profileImage}
-              alt={name}
-              className="h-12 w-12 rounded-full border-2 border-[#aca377]/50 object-cover"
+              alt={profileImageAlt}
+              className="h-12 w-12 rounded-full border-2 border-white/50 object-cover"
             />
             <div className="absolute -right-0.5 -bottom-0.5 h-4 w-4 rounded-full border-2 border-[#0a0a0a] bg-green-500" />
           </div>
           <div className="flex-1">
             <h3 className="text-base font-bold text-white">{name}</h3>
-            <p className="text-[10px] text-[#aca377] md:text-xs">{role}</p>
+            <p className="text-[10px] text-gray-400 md:text-xs">{role}</p>
           </div>
         </div>
 
         {/* Title */}
         <h2 className="mb-3 text-lg leading-tight font-bold text-white md:text-xl">
-          Agenda Una Llamada de Admisión Con Fran
+          Agenda Una Llamada Con Fran
         </h2>
 
         {/* Description */}
@@ -106,11 +108,11 @@ const CallModal = ({
 
         {/* Availability Indicator */}
         {availabilityText && (
-          <div className="mb-4 flex items-center justify-between rounded-xl border border-[#aca377]/20 bg-black/40 px-3 py-2">
+          <div className="mb-4 flex items-center justify-between rounded-xl border border-white/10 bg-black/40 px-3 py-2">
             <span className="text-[10px] text-gray-300 md:text-xs">
               {availabilityText}
             </span>
-            <span className="rounded-full bg-[#aca377]/20 px-2.5 py-1 text-[9px] font-semibold text-[#aca377] md:text-[10px]">
+            <span className="rounded-full bg-white/10 px-2.5 py-1 text-[9px] font-semibold text-white md:text-[10px]">
               1 h
             </span>
           </div>
@@ -121,7 +123,7 @@ const CallModal = ({
           href={calendarLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-[#aca377] bg-gradient-to-r from-[#aca377]/20 to-[#aca377]/10 px-4 py-3 text-center text-xs font-bold text-white transition-all duration-300 hover:border-[#e5dcb6] hover:bg-gradient-to-r hover:from-[#aca377]/30 hover:to-[#aca377]/20 hover:shadow-[0_0_30px_rgba(172,163,119,0.4)] focus:ring-2 focus:ring-[#aca377]/50 focus:outline-none md:px-5 md:py-3.5 md:text-sm"
+          className="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-white/80 bg-gradient-to-r from-white/10 to-white/5 px-4 py-3 text-center text-xs font-bold text-white transition-all duration-300 hover:border-white hover:bg-gradient-to-r hover:from-white/20 hover:to-white/10 hover:shadow-[0_0_30px_rgba(255,255,255,0.15)] focus:ring-2 focus:ring-white/50 focus:outline-none md:px-5 md:py-3.5 md:text-sm"
         >
           <svg
             className="h-4 w-4 md:h-5 md:w-5"
