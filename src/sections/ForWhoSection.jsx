@@ -88,7 +88,7 @@ const XIcon = () => (
  * "Para quién es esto" items
  */
 const forWhoItems = [
-  "Eres un consultor high ticket y hacés entre $10k-$15k/mes.",
+  "Eres un consultor high ticket y hacés entre $20k-$30k/mes.",
   "Eres valioso: tienes habilidades y puedes ayudar a otros a crecer.",
   "Ya tenes clientes y resultados, pero querés conseguir más.",
   "Estás dispuesto a ejecutar y sostener estándares altos durante 4-6 meses aunque duela.",
@@ -99,10 +99,10 @@ const forWhoItems = [
  * "Para quién no es esto" items
  */
 const notForWhoItems = [
-  "Eres principiante: o no eres consultor y no llegaste de forma consistente los $10K USD mensuales.",
+  "Eres principiante: o no eres consultor y no llegaste de forma consistente a los $20K USD mensuales.",
   "Necesitás sí o sí una garantía y una promesa para tomar acción, pd: acá no usamos con ninguna de las dos.",
   "No querés comprometerte con tu negocio y buscas una niñera que te haga todo por vos.",
-  "Irresponsable e inmaduro: Has trabajado con 7 mentores y “todos ellos” fueron el problema.",
+  "Irresponsable e inmaduro: Has trabajado con 7 mentores y \"todos ellos\" fueron el problema.",
   "Te encanta complicarte la vida: buscando más volumen, más agendas, más equipo (pero menos ganancia).",
 ];
 
