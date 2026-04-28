@@ -5,35 +5,36 @@ import TimelineRoadmap from "../components/about/TimelineRoadmap";
 // Components
 import PainPointsGrid from "../components/about/PainPointsGrid";
 import ObjectivesGrid from "../components/about/ObjectivesGrid";
-import ResultsGallery from "../components/about/ResultsGallery";
-import StorySection from "../components/about/StorySection";
+// import ResultsGallery from "../components/about/ResultsGallery";
+// import StorySection from "../components/about/StorySection";
 import MethodSection from "../components/about/MethodSection";
 
 // Data
-import { painPoints, objectives } from "../data/aboutData";
-import { resultImages } from "../data/aboutImages";
+import { painPoints, objectives } from "../data/about/content";
+// import { resultImages, storyImages } from "../data/about/images";
 
-// Images
-import fran1 from "../assets/images/fran1.webp";
-import fran2 from "../assets/images/fran 2.webp";
-import sistemas from "../assets/images/sistemas.png";
+// Constants
+import { ANIMATION_DELAYS } from "../constants/animations";
 
 const AboutSection = () => {
   return (
     <section className="overflow-hidden px-6 pt-28 text-white">
       <div className="mx-auto max-w-[1300px] space-y-10">
         {/* === Section Title === */}
-        <RevealOnScroll direction="up" delay={0.3}>
-          <div className="text-center">
-            <h2 className="text-4xl font-bold tracking-tight md:text-6xl">
+        <RevealOnScroll direction="up" delay={ANIMATION_DELAYS.ABOUT_TITLE}>
+          <header className="text-center">
+            <h2 className="text-[24px] leading-[1.2em] font-extralight tracking-[-0.7px] md:text-5xl lg:text-[52px]">
               Si estás aquí, es muy probable que algo de <br /> lo que voy a
               decir resuene fuerte con vos:
             </h2>
-          </div>
+          </header>
         </RevealOnScroll>
 
         {/* === Description === */}
-        <RevealOnScroll direction="up" delay={0.5}>
+        <RevealOnScroll
+          direction="up"
+          delay={ANIMATION_DELAYS.ABOUT_DESCRIPTION}
+        >
           <p className="mt-4 text-center text-[20px] text-white md:text-[25px]">
             Eres un{" "}
             <span className="text-[22px] font-bold text-[#aca377] md:text-[27px]">
@@ -48,9 +49,12 @@ const AboutSection = () => {
         <PainPointsGrid painPoints={painPoints} />
 
         {/* === Objectives Section === */}
-        <section className="mx-auto my-20 space-y-8 md:space-y-10">
+        <article className="mx-auto my-20 space-y-8 md:space-y-10">
           {/* === Section Header === */}
-          <RevealOnScroll direction="up" delay={0.2}>
+          <RevealOnScroll
+            direction="up"
+            delay={ANIMATION_DELAYS.ABOUT_OBJECTIVES_HEADER}
+          >
             <div className="space-y-4 text-center">
               <h2 className="bg-gradient-to-r from-white via-[#aca377] to-white bg-clip-text text-4xl leading-tight font-bold tracking-tight text-transparent md:text-5xl lg:text-6xl">
                 Lo que quieres es claro:
@@ -59,7 +63,10 @@ const AboutSection = () => {
           </RevealOnScroll>
 
           {/* === Results Statement === */}
-          <RevealOnScroll direction="up" delay={0.3}>
+          <RevealOnScroll
+            direction="up"
+            delay={ANIMATION_DELAYS.ABOUT_RESULTS_STATEMENT}
+          >
             <div className="relative">
               <div className="absolute inset-0 bg-linear-to-r from-[#aca377]/20 via-[#aca377]/5 to-[#aca377]/20 blur-3xl"></div>
               <div className="relative rounded-3xl border border-[#aca377]/50 bg-gradient-to-br from-zinc-900 to-black p-8 text-center md:p-10">
@@ -85,18 +92,21 @@ const AboutSection = () => {
 
           {/* === Objectives Grid === */}
           <ObjectivesGrid objectives={objectives} />
-        </section>
-
-        {/* === Results Section === */}
-        <ResultsGallery images={resultImages} />
+        </article>
 
         {/* === Schedule Call Button ===  */}
-        <RevealOnScroll direction="up" delay={0.6}>
-          <ScheduleCallButton href="https://cal.com/fran-di-giorno/auditoria-estrategica-obsidian-systems?overlayCalendar=true" />
+        <RevealOnScroll direction="up" delay={ANIMATION_DELAYS.ABOUT_CTA}>
+          <ScheduleCallButton href="https://cal.com/fran-di-giorno/admision-obsidian-systems" />
         </RevealOnScroll>
 
-        {/* === Story Section === */}
-        <StorySection image1={fran1} image2={fran2} overlayImage={sistemas} />
+        {/* === Story Section (Unused but kept for reference) === */}
+        {/*
+        <StorySection
+          image1={storyImages.fran1}
+          image2={storyImages.fran2}
+          overlayImage={storyImages.sistemas}
+        />
+        */}
 
         {/* === SSE Method Section === */}
         <MethodSection />

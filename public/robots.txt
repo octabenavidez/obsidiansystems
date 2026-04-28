@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you-page
+Sitemap: https://obsidiansystems.com.ar/sitemap.xml
+
+# LLMs
+Llms: https://obsidiansystems.com.ar/llms.txt
+
+# AI Crawler Management
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: cohere-ai
+Allow: /

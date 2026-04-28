@@ -1,5 +1,12 @@
 import RevealOnScroll from "../../common/RevealOnScroll";
 
+/**
+ * Objectives Grid component
+ * Displays a grid of business objectives with icons and hover effects
+ * @param {Object} props - Component properties
+ * @param {Array<{icon: JSX.Element, title: string, description: string}>} props.objectives - Array of objective objects
+ * @returns {JSX.Element} Rendered objectives grid
+ */
 const ObjectivesGrid = ({ objectives }) => {
   return (
     <div className="grid gap-6 md:grid-cols-2 md:gap-8 lg:gap-10">

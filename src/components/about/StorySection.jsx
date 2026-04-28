@@ -1,11 +1,21 @@
 import RevealOnScroll from "../../common/RevealOnScroll";
 import { Check } from "lucide-react";
+import { ANIMATION_DELAYS } from "../../constants/animations";
 
+/**
+ * Story Section component
+ * Tells the founder's story and the "why" behind the method
+ * @param {Object} props - Component properties
+ * @param {string} props.image1 - URL for the first image (Francisco)
+ * @param {string} props.image2 - URL for the second image (Working)
+ * @param {string} props.overlayImage - URL for the overlay image (Systems)
+ * @returns {JSX.Element} Rendered story section
+ */
 const StorySection = ({ image1, image2, overlayImage }) => {
   return (
     <section className="mx-auto my-16 space-y-4">
       {/* Title */}
-      <RevealOnScroll direction="up" delay={0.2}>
+      <RevealOnScroll direction="up" delay={ANIMATION_DELAYS.ABOUT_STORY_TITLE}>
         <h2 className="text-center text-2xl font-bold tracking-tight text-white md:text-3xl lg:text-4xl">
           Antes de enseñarte mi método,{" "}
           <span className="text-[#aca377]">
@@ -15,19 +25,26 @@ const StorySection = ({ image1, image2, overlayImage }) => {
       </RevealOnScroll>
 
       {/* Story Block 1 */}
-      <div className="grid gap-6 md:grid-cols-[300px_1fr] md:items-start md:gap-8">
-        <RevealOnScroll direction="right" delay={0.3}>
-          <div className="relative mx-auto h-80 w-full max-w-sm overflow-hidden rounded-xl border border-[#aca377]/30 shadow-[0_0_20px_rgba(172,163,119,0.1)] md:h-96 md:max-w-md">
+      <div className="grid gap-6 md:grid-cols-[400px_1fr] md:items-center md:gap-8 lg:grid-cols-[450px_1fr]">
+        <RevealOnScroll
+          direction="right"
+          delay={ANIMATION_DELAYS.ABOUT_STORY_BLOCK}
+        >
+          <div className="relative mx-auto h-80 w-full overflow-hidden rounded-xl border border-[#aca377]/30 shadow-[0_0_20px_rgba(172,163,119,0.1)] md:h-[420px]">
             <img
               src={image1}
               alt="Francisco Di Giorno"
               className="h-full w-full object-cover"
+              loading="lazy"
             />
           </div>
         </RevealOnScroll>
-        <RevealOnScroll direction="left" delay={0.4}>
-          <div className="space-y-3 text-sm text-gray-300 md:text-base">
-            <h3 className="text-xl font-bold text-white md:text-2xl">
+        <RevealOnScroll
+          direction="left"
+          delay={ANIMATION_DELAYS.ABOUT_STORY_BLOCK + 0.1}
+        >
+          <div className="space-y-4 text-base text-gray-300 md:text-lg lg:text-xl">
+            <h3 className="text-2xl font-bold text-white md:text-3xl">
               Francisco Di Giorno
             </h3>
             <p>
@@ -54,7 +71,7 @@ const StorySection = ({ image1, image2, overlayImage }) => {
       </div>
 
       {/* Transition */}
-      <RevealOnScroll direction="up" delay={0.3}>
+      <RevealOnScroll direction="up" delay={ANIMATION_DELAYS.ABOUT_STORY_BLOCK}>
         <div className="rounded-xl border border-red-900/30 bg-gradient-to-br from-red-950/20 to-black p-5 text-center md:p-6">
           <p className="text-base font-medium text-gray-200 md:text-lg">
             Fue el momento exacto en que me di cuenta:{" "}
@@ -66,9 +83,12 @@ const StorySection = ({ image1, image2, overlayImage }) => {
       </RevealOnScroll>
 
       {/* Story Block 2 */}
-      <div className="grid gap-6 md:grid-cols-[1fr_300px] md:items-start md:gap-8">
-        <RevealOnScroll direction="right" delay={0.3}>
-          <div className="space-y-3 text-sm text-gray-300 md:text-base">
+      <div className="grid gap-6 md:grid-cols-[1fr_400px] md:items-center md:gap-8 lg:grid-cols-[1fr_450px]">
+        <RevealOnScroll
+          direction="right"
+          delay={ANIMATION_DELAYS.ABOUT_STORY_BLOCK}
+        >
+          <div className="space-y-4 text-base text-gray-300 md:text-lg lg:text-xl">
             <p>
               En ese caos, conocí a un mentor de Estados Unidos que me enseñó a
               crear
@@ -93,14 +113,18 @@ const StorySection = ({ image1, image2, overlayImage }) => {
             </p>
           </div>
         </RevealOnScroll>
-        <RevealOnScroll direction="left" delay={0.4}>
-          <div className="relative mx-auto max-w-sm md:max-w-md">
+        <RevealOnScroll
+          direction="left"
+          delay={ANIMATION_DELAYS.ABOUT_STORY_BLOCK + 0.1}
+        >
+          <div className="relative mx-auto w-full">
             {/* Main Image */}
-            <div className="relative h-80 w-full overflow-hidden rounded-xl border border-[#aca377]/30 shadow-[0_0_20px_rgba(172,163,119,0.1)] md:h-96">
+            <div className="relative h-80 w-full overflow-hidden rounded-xl border border-[#aca377]/30 shadow-[0_0_20px_rgba(172,163,119,0.1)] md:h-[420px]">
               <img
                 src={image2}
                 alt="Francisco trabajando"
                 className="h-full w-full object-cover"
+                loading="lazy"
               />
             </div>
 
@@ -108,8 +132,9 @@ const StorySection = ({ image1, image2, overlayImage }) => {
             <div className="absolute -right-6 -bottom-6 z-10 h-32 w-auto md:-left-24 md:h-40">
               <img
                 src={overlayImage}
-                alt="Sistemas Obsidian"
+                alt="Sistemas Consulting OS™"
                 className="h-full w-auto object-contain drop-shadow-2xl"
+                loading="lazy"
               />
             </div>
           </div>
@@ -117,7 +142,7 @@ const StorySection = ({ image1, image2, overlayImage }) => {
       </div>
 
       {/* Realization Block */}
-      <RevealOnScroll direction="up" delay={0.3}>
+      <RevealOnScroll direction="up" delay={ANIMATION_DELAYS.ABOUT_STORY_BLOCK}>
         <div className="space-y-5 rounded-2xl border border-[#aca377]/20 bg-gradient-to-b from-[#aca377]/5 to-transparent p-6 md:p-8">
           <div className="space-y-3 text-center text-sm text-gray-300 md:text-base">
             <p>
@@ -134,7 +159,7 @@ const StorySection = ({ image1, image2, overlayImage }) => {
             </p>
           </div>
 
-          <div className="mx-auto max-w-2xl rounded-xl border border-white/10 bg-white/5 p-4 md:p-5 mb-10">
+          <div className="mx-auto mb-10 max-w-2xl rounded-xl border border-white/10 bg-white/5 p-4 md:p-5">
             <p className="mb-2 text-sm font-bold text-white md:text-base">
               Ese mismo error frena hoy a casi todos los consultores B2B:
             </p>
@@ -205,7 +230,10 @@ const StorySection = ({ image1, image2, overlayImage }) => {
       </RevealOnScroll>
 
       {/* Final Conclusion */}
-      <RevealOnScroll direction="up" delay={0.4}>
+      <RevealOnScroll
+        direction="up"
+        delay={ANIMATION_DELAYS.ABOUT_STORY_BLOCK + 0.1}
+      >
         <div className="grid justify-center gap-5 rounded-2xl border border-[#aca377]/30 bg-gradient-to-br from-[#aca377]/10 to-black p-6 md:p-8">
           <div className="space-y-3">
             <h3 className="text-center text-lg font-bold text-white md:text-xl">

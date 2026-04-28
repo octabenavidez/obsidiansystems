@@ -1,11 +1,17 @@
 import RevealOnScroll from "../../common/RevealOnScroll";
 import { Check } from "lucide-react";
+import { ANIMATION_DELAYS } from "../../constants/animations";
 
+/**
+ * Method Section component
+ * Explains the SSE (Simplify, Systematize, Scale) method
+ * @returns {JSX.Element} Rendered method section
+ */
 const MethodSection = () => {
   return (
     <>
       {/* === SSE Method Section === */}
-      <RevealOnScroll direction="up" delay={0.3}>
+      <RevealOnScroll direction="up" delay={ANIMATION_DELAYS.ABOUT_METHOD}>
         <div className="mx-auto mt-26 max-w-4xl space-y-6">
           {/* Title */}
           <h2 className="text-center text-2xl font-bold text-white md:text-5xl">

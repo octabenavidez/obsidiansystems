@@ -1,0 +1,36 @@
+/**
+ * Animation delay constants for consistent timing across components
+ * All values are in seconds
+ */
+export const ANIMATION_DELAYS = {
+  HERO_LOGO: 0.1,
+  HERO_HEADLINE: 0.2,
+  HERO_SUBHEADLINE: 0.3,
+  HERO_IMAGE: 0.4,
+  HERO_SOCIAL_PROOF: 0.5,
+  HERO_CTA: 0.6,
+  HERO_COMPARISON: 0.7,
+  HERO_GALLERY: 0.8,
+
+  // About Section
+  ABOUT_TITLE: 0.3,
+  ABOUT_DESCRIPTION: 0.5,
+  ABOUT_PAIN_POINTS: 0.6,
+  ABOUT_OBJECTIVES_HEADER: 0.2,
+  ABOUT_RESULTS_STATEMENT: 0.3,
+  ABOUT_RESULTS_GALLERY: 1.0,
+  ABOUT_CTA: 0.6,
+  ABOUT_STORY_TITLE: 0.2,
+  ABOUT_STORY_BLOCK: 0.3,
+  ABOUT_METHOD: 0.3,
+
+  // Clients Section
+  CLIENTS_HEADER: 0.2,
+  CLIENTS_GRID_ITEM: 0.1, // Base delay multiplier
+  CLIENTS_INVESTMENT_PLAN: 0.5,
+
+  // Objectives & Next Steps Section
+  OBJECTIVES_QUALIFICATION: 0.3,
+  OBJECTIVES_NEXT_STEPS_TITLE: 0.2,
+  OBJECTIVES_NEXT_STEPS_CTA: 0.7,
+};
