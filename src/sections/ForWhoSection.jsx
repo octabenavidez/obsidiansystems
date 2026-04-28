@@ -150,7 +150,7 @@ const ForWhoSection = () => {
               <div className="flex h-full flex-col rounded-2xl p-6 md:p-12">
                 {/* Card Title */}
                 <h3 className="mb-3 text-2xl font-bold text-white/70 italic md:text-4xl">
-                  Para quién no es esto...
+                  Para quién NO es esto
                 </h3>
 
                 {/* Separator line */}
@@ -188,7 +188,7 @@ const ForWhoSection = () => {
                   className="mb-3 text-2xl font-bold italic md:text-4xl"
                   style={silverGradientStyle}
                 >
-                  Para quién es esto...
+                  Para quién SÍ es esto
                 </h3>
 
                 {/* Separator line */}
