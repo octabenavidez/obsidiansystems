@@ -6,7 +6,7 @@ export const resultImages = [
   },
   {
     type: "image",
-    src: "/src/assets/images/results-images/3.avif",
+    src: "/src/assets/images/results-images/3.jpeg",
     alt: "Prueba de éxito de cliente 2 - Consulting OS™",
   },
   {
@@ -75,7 +75,7 @@ export const photos = [
     src: "/src/assets/images/results-images/14.avif",
     width: 194,
     height: 311,
-    alt: "Estadísticas de Instagram mostrando 100% de entrega y altísimo CTR en encuestas",
+    alt: "Infografía de resultados de crecimiento: perfil de ELtigrefusco con 10k seguidores en Kick, métricas de tasa de registro del 50% y más de 200 leads obtenidos en menos de 7 horas",
   },
   // Row 2
   {
