@@ -40,7 +40,7 @@ export const clientes = [
   },
   {
     nombre: "Gastón Gallardo",
-    imagen: "/src/assets/images/clients-images/gaston.png",
+    imagen: "/src/assets/images/clients-images/gaston.jpeg",
     position: "center 35%",
   },
   {
@@ -56,6 +56,26 @@ export const clientes = [
   {
     nombre: "Alexander Garcia",
     imagen: "/src/assets/images/clients-images/alexander.png",
+    position: "center center",
+  },
+  {
+    nombre: "Adrián Camino",
+    imagen: "/src/assets/images/clients-images/adrian.jpeg",
+    position: "center center",
+  },
+  {
+    nombre: "Miguel Ángel",
+    imagen: "/src/assets/images/clients-images/miguel.jpeg",
+    position: "center center",
+  },
+  {
+    nombre: "Nico Iannaci",
+    imagen: "/src/assets/images/clients-images/nico.jpeg",
+    position: "center center",
+  },
+  {
+    nombre: "Valentina Gauna",
+    imagen: "/src/assets/images/clients-images/valentina.jpeg",
     position: "center center",
   },
 ];
