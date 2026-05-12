@@ -161,7 +161,7 @@ const ModelSection = () => {
                 <img
                   src={congruenceImage}
                   alt="Francisco Di Giorno diseñando arquitecturas empresariales en una pizarra con un valle montañoso de fondo, ilustrando el Principio 2: Congruencia"
-                  className="absolute inset-0 h-full w-full object-cover"
+                  className="absolute inset-0 h-full w-full object-cover object-top"
                 />
 
                 {/* Badge with silver gradient border */}
