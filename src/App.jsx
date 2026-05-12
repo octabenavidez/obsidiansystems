@@ -34,7 +34,7 @@ function App() {
         <FloatingCallButton
           calendarLink="https://cal.com/fran-di-giorno/admision-obsidian-systems"
           name="Fran Di Giorno"
-          role="CEO Consulting OS™"
+          role="CEO de Obsidian Systems"
           description='Esta llamada será conmigo. No es una "auditoría"; es para revisar lo que has construido y confirmar si cumples las condiciones para que trabajemos juntos.'
           availabilityText="Solo estoy tomando pocas llamadas por día."
         />

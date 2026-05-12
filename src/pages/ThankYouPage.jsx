@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import RevealOnScroll from "../common/RevealOnScroll";
 import Logo from "../common/Logo";
 import Layout from "../layout/Layout";
@@ -7,47 +6,10 @@ import { ANIMATION_DELAYS } from "../constants/animations";
 
 /**
  * Thank You page component displayed after successful form submission or booking.
- * Features the Logo, a title, subtitle, and Wistia video.
+ * Features the Logo, a title, subtitle, and YouTube video.
  * @returns {JSX.Element} The rendered thank you page
  */
 function ThankYouPage() {
-  const stylesInjected = useRef(false);
-
-  // Inject Wistia styles once on mount
-  useEffect(() => {
-    if (stylesInjected.current) return;
-    stylesInjected.current = true;
-
-    const styleId = "wistia-thankyou-styles";
-    if (!document.getElementById(styleId)) {
-      const style = document.createElement("style");
-      style.id = styleId;
-      style.textContent = `
-        .wistia-thankyou-container {
-          position: relative;
-          padding-top: 56.25%;
-          background: #0a0a0a;
-          border-radius: 1rem;
-          overflow: hidden;
-        }
-        .wistia-thankyou-container wistia-player {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
-        wistia-player[media-id='025mmchvgs']:not(:defined) {
-          background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/025mmchvgs/swatch');
-          display: block;
-          filter: blur(5px);
-          padding-top: 56.25%;
-        }
-      `;
-      document.head.appendChild(style);
-    }
-  }, []);
-
   return (
     <Layout>
       <section className="relative flex flex-col gap-9 overflow-hidden px-4 text-center text-white md:px-6 lg:px-8">
@@ -74,11 +36,11 @@ function ThankYouPage() {
           >
             <p className="mx-auto max-w-2xl text-lg text-zinc-400 md:text-xl">
               Mira este video completo para entender nuestra
-              metodología de trabajo.
+              metodología de trabajo.
             </p>
           </RevealOnScroll>
 
-          {/* Wistia Video */}
+          {/* YouTube Video */}
           <RevealOnScroll direction="up" delay={ANIMATION_DELAYS.HERO_IMAGE}>
             <div className="mx-auto w-full max-w-[900px]">
               <div
@@ -90,11 +52,29 @@ function ThankYouPage() {
                 }}
               >
                 {/* Stable aspect ratio container */}
-                <div className="wistia-thankyou-container">
-                  <wistia-player
-                    media-id="025mmchvgs"
-                    aspect="1.7777777777777777"
-                  ></wistia-player>
+                <div
+                  style={{
+                    position: "relative",
+                    paddingTop: "56.25%",
+                    background: "#0a0a0a",
+                    borderRadius: "1rem",
+                    overflow: "hidden",
+                  }}
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/VaWWRv9aioc"
+                    title="Video de metodología - Obsidian Systems"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      border: "none",
+                    }}
+                  />
                 </div>
               </div>
             </div>
