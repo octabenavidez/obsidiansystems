@@ -79,3 +79,5 @@ export const clientes = [
     position: "center center",
   },
 ];
+
+// TODO Agregarle Alts

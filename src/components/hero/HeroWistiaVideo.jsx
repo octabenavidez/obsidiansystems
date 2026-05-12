@@ -69,27 +69,21 @@ const HeroWistiaVideo = () => {
               overflow: "hidden",
             }}
           >
-            {/* Wistia player */}
-            <style>
-              {`
-                wistia-player[media-id='nz44sz034p'] {
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
-                }
-                wistia-player[media-id='nz44sz034p']:not(:defined) {
-                  background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/nz44sz034p/swatch');
-                  display: block;
-                  filter: blur(5px);
-                }
-              `}
-            </style>
-            <wistia-player
-              media-id="nz44sz034p"
-              aspect="1.7777777777777777"
-            ></wistia-player>
+            {/* YouTube player */}
+            <iframe
+              src="https://www.youtube.com/embed/ektmo36QUdA"
+              title="Video de Francisco Di Giorno - Consulting OS™"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                border: "none",
+              }}
+            />
           </div>
         </div>
       </div>
