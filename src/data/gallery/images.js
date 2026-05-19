@@ -123,15 +123,7 @@ export const photos = [
   },
 ];
 
-export const widePhoto = [
-  // Row 4 - Full width
-  {
-    src: "/src/assets/images/results-images/22.avif",
-    width: 1237,
-    height: 394,
-    alt: "Panel de analíticas de embudo mostrando más de 20,000 visitas para el embudo de Hábitos Ancestrales",
-  },
-];
+export const widePhoto = [];
 
 export const largerPhotos = [
   // Row 5

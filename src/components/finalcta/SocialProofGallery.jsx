@@ -85,23 +85,25 @@ const SocialProofGallery = ({ photos, widePhotos, largerPhotos }) => {
         </div>
 
         {/* Photo Album Wide Row */}
-        <div className="mt-5">
-          <RowsPhotoAlbum
-            photos={widePhotos}
-            targetRowHeight={155}
-            spacing={20}
-            render={{
-              image: (props, context) => (
-                <img
-                  {...props}
-                  onClick={() =>
-                    openLightbox(getIndexOffset("wide") + context.index)
-                  }
-                />
-              ),
-            }}
-          />
-        </div>
+        {widePhotos && widePhotos.length > 0 && (
+          <div className="mt-5">
+            <RowsPhotoAlbum
+              photos={widePhotos}
+              targetRowHeight={155}
+              spacing={20}
+              render={{
+                image: (props, context) => (
+                  <img
+                    {...props}
+                    onClick={() =>
+                      openLightbox(getIndexOffset("wide") + context.index)
+                    }
+                  />
+                ),
+              }}
+            />
+          </div>
+        )}
 
         {/* Photo Album Bottom Row */}
         <div className="mt-5">
